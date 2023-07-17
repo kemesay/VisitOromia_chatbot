@@ -1,0 +1,150 @@
+version: "3.1"
+nlu:
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - get the time
+    - what time is it
+    - time
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - goodby
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: michu
+  examples: |
+    - What is Michu?
+    - michu
+    - Michu loan
+    - Michu digital lending
+- intent: install_michu
+  examples: |
+    - How to install Michu?
+    - how to download michu?
+    - how to get michu app?
+    - where can I get michu app ?
+    - is michu app available on app store ?
+    - is michu app available on play store ?
+
+- intent: language
+  examples: |
+    - What language do you speak?
+    - Do you only handle english?
+
+- intent: eligibility
+  examples: |
+    - Am I eligible for a loan?
+    - What are the eligibility criteria for michu loan ?
+    - eligibility of nano loan 
+    - eligibility of micro loan 
+    - eligibility to take michu loans
+
+- intent: application
+  examples: |
+    - can I apply for a loan?
+    - how can I apply for michu loan?
+    - how can I apply ?
+    - how to apply michu ?
+    - Can You tell me about Michu loan application process ?
+
+- intent: Micro_loan
+  examples: |
+    - what is micro loan ?
+    - michu micro loan
+    - who can apply for micro loan ?
+    - can I apply for micro loan ?
+    - documents required to take micro loan ?
+    - how much is the amount offered by micro loan ?
+    - loan duration of micro loan ?
+
+- intent: Nano_loan
+  examples: |
+    - what is Nano loan ?
+    - michu Nano loan
+    - who can apply for Nano loan ?
+    - can I apply for Nano loan ?
+    - documents required to take Nano loan ?
+    - how much is the amount offered by Nano loan ?
+    - loan duration of Nano loan ?
+
+- intent: approval_status
+  examples: |
+    - What is the status of my loan application ?
+    - Has my loan been approved ?
+    - what should I do in-order for my loan to be approved ?

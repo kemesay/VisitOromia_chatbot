@@ -1,0 +1,127 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: bot challenge
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+- story: about michu loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: michu
+  - action: utter_michu
+  - intent: install_michu
+  - action: utter_install_michu
+
+- story: about language
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: language
+  - action: utter_language
+
+- story: about eligibility
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: eligibility
+  - action: utter_eligibility
+
+- story: about application
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: application
+  - action: utter_application
+
+- story: about micro loan 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Micro_loan
+  - action: utter_Micro_loan
+
+- story: about nano loan 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Nano_loan
+  - action: utter_Nano_loan
+
+- story: about approval of loan 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: approval_status
+  - action: utter_approval_status
+
+  # - intent: repayment
+  # - action: utter_repayment
+  # - intent: disbursement
+  # - action: utter_Disbursement
+  # - intent: interest_rates
+  # - action: utter_interest_rates
+  # - intent: duration
+  # - action: utter_duration
+  # - intent: rejection
+  # - action: utter_rejection
+  # - intent: app_language
+  # - action: utter_app_lang
+  # # - intent: agreement
+  # # - action: utter_agreement
+  # # - intent: document_upload
+  # # - action: utter_document_upload
+  # # - intent: late_payment
+  # # - action: utter_late_payment
+  # # - intent: processing_time
+  # # - action: utter_processing_time
+  # # -intent: reapplication
+  # # - action: utter_reapplication
+
+- story: about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+
