@@ -18,7 +18,7 @@ services:
         - ./data:/app/data
       ports:
         - 5055:5055
-    
+
     rasa-shell:
      image: rasa/rasa:3.6.2-full
      command: shell --endpoints http://rasa:5005
