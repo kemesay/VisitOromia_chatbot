@@ -9,7 +9,7 @@ services:
       - "./:/app"
       - "./certs:/app/certs"
       ports: 
-        - "5005:5005"
+        - "8000:8000"
     action_server:
       container_name: "action_server"
       build:
