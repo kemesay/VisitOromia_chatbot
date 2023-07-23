@@ -15,7 +15,10 @@ VOLUME /app/models
 
 ENV SSL_CERTIFICATE_PATH="/app/certs/server.p12"
 ENV SSL_CERTIFICATE_KEY_PATH="/app/certs/server.p12"
-ENV SSL_CERTIFICATE_PASSWORD="Coop#4321"  
+ENV SSL_CERTIFICATE_PASSWORD="Coop#4321"
+ENV PORT=443  
+# Use the desired port, e.g., 443 or 8443
+
 # If the certificate is password-protected, provide the password here
 
 CMD ["run","-m","/app/models","--enable-api","--cors","*","--debug" ,"--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]

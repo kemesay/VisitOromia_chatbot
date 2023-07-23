@@ -9,7 +9,7 @@ services:
       - "./:/app"
       - "./certs:/app/certs"
       ports: 
-        - "8000:8000"
+        - "443:443"
     action_server:
       container_name: "action_server"
       build:
