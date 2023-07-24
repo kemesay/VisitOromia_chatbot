@@ -4,7 +4,7 @@ services:
       container_name: "rasa_server"
       user: root
       build: 
-        context:  rasa
+        context:  .
       volumes:
       - "./:/app"
       - "./certs:/app/certs"
@@ -24,6 +24,6 @@ services:
      image: rasa/rasa:3.6.2-full
      command: shell --endpoints http://rasa:443
      ports:
-      - "5055:443"
+      - "5055:5055"
 
     
