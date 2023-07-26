@@ -42,11 +42,21 @@ policies:
 # If you'd like to customize them, uncomment and adjust the policies.
 # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
-  - name: RulePolicy
-  - name: UnexpecTEDIntentPolicy
-  #   max_history: 3
-  #   epochs: 100
+    max_history: 5
   - name: TEDPolicy
-    max_history: 5 
+    max_history: 10
     epochs: 100
     constrain_similarities: true
+
+  - name: RulePolicy
+  - name: MappingPolicy
+    priority: 5
+  - name: UnexpecTEDIntentPolicy
+    max_history: 3
+    epochs: 100
+  - name: FormPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.2
+    core_threshold: 0.3
+    fallback_action_name: "action_default_fallback"
+
