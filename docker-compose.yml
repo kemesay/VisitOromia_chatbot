@@ -18,12 +18,12 @@ services:
         - ./actions:/app/actions
         - ./data:/app/data
       ports:
-        - 80:80
+        - 5055:5055
 
-    rasa-shell:
-     image: rasa/rasa:3.6.2-full
-     command: shell --endpoints http://rasa:443
-     ports:
-      - "5055:5055"
+    # rasa-shell:
+    #  image: rasa/rasa:3.6.2-full
+    #  command: shell --endpoints http://rasa:443
+    #  ports:
+    #   - "5055:5055"
 
     
