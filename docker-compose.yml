@@ -20,8 +20,8 @@ services:
         - "./data:/app/data"
       ports:
         - "5055:5055"
-      depends_on:
-        - rasa-production
+      # depends_on:
+      #   - rasa-production
 
     # rasa-shell:
     #  image: rasa/rasa:3.6.2-full
