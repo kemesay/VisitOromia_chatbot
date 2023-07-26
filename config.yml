@@ -32,9 +32,9 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.6
     ambiguity_threshold: 0.3
-# entities:
-#   - product
-#   - procedure
+entities:
+  - product
+  - procedure
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
@@ -43,7 +43,7 @@ policies:
 # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: RulePolicy
-  # - name: UnexpecTEDIntentPolicy
+  - name: UnexpecTEDIntentPolicy
   #   max_history: 3
   #   epochs: 100
   - name: TEDPolicy

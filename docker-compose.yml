@@ -15,10 +15,13 @@ services:
       build:
         context: actions
       volumes:
-        - ./actions:/app/actions
-        - ./data:/app/data
+        - "./actions:/app/actions"
+        - "./models:/app/models"
+        - "./data:/app/data"
       ports:
-        - 5055:5055
+        - "5055:5055"
+      depends_on:
+        - rasa-production
 
     # rasa-shell:
     #  image: rasa/rasa:3.6.2-full
