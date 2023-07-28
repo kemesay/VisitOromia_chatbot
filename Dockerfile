@@ -1,4 +1,4 @@
-FROM rasa/rasa:3.5
+FROM rasa/rasa:2.8.0
 WORKDIR '/app'
 COPY . /app
 USER root
