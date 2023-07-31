@@ -1,4 +1,4 @@
-FROM rasa/rasa
+FROM rasa/rasa:3.0.0
 WORKDIR '/app'
 COPY . /app
 USER root
@@ -8,7 +8,7 @@ COPY ./data /app/data
 COPY ./models /app/models
 RUN mkdir /app/certs
 COPY server.p12 /app/certs/server.p12
-RUN  rasa train nlu
+RUN  rasa train
 VOLUME /app
 VOLUME /app/data
 VOLUME /app/models
