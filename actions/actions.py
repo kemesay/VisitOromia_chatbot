@@ -4,7 +4,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 # This is a simple example for a custom action which utters "Hello World!"
 from ast import Import
-from tkinter import Button, Menu
+# from tkinter import Button, Menu
 from typing import Any, Text, Dict, List, Union
 # from rasa_core.agent import Agent
 from rasa_sdk import Action, Tracker

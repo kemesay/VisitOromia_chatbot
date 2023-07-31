@@ -54,11 +54,12 @@ stories:
 
 - story: video_gallery
   steps:
+  - intent: video_gallery
   - action: utter_gallery_videos
   - action: gallery_videos_action_exercise
-  # - intent: Language_setting
-  # - action: utter_langs
-  # - action: langsetting_exercise
+  - intent: Language_setting
+  - action: utter_langs
+  - action: langsetting_exercise
 
 - story: Social_media
   steps:
