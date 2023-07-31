@@ -1,127 +1,688 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story: menu_of_system
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
+  # - action: action_service
+  - intent: menu
+  - action: utter_Menu
+ 
+- story: otc_corpoations
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: otc
+  - action: utter_ot
+  - intent: visitoromia
+  - action: utter_vo
 
-- story: sad path 2
+- story: about_mv
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: aboutotc
+  - action: utter_aotc
+  - intent: missionandvision
+  - action: utter_mission_vision
+
+- story: invest_career
+  steps:
+  - intent: investment_otc
+  - action: utter_invest
+  - intent: otccareer
+  - action: utter_care 
+
+- story: cloth_sourvenir_contact
+  steps:
+  - intent: otccontact
+  - action: utter_contactus
+  - intent: clot_sourvenir_shops
+  - action: utter_cloth_sourvenir 
+
+- story: lang_life
+  steps:
+  # - intent: language
+  # - action: utter_multilingual
+  - intent: live_chat
+  - action: utter_live_chat
+
+- story: menu_gallery
+  steps:
+  - intent: gallery
+  - action: utter_gallery
+  - intent: image_gallery
+  - action: utter_gallery_pictures
+  - action: gallery_images_action_exercise
+
+- story: video_gallery
+  steps:
+  - action: utter_gallery_videos
+  - action: gallery_videos_action_exercise
+  # - intent: Language_setting
+  # - action: utter_langs
+  # - action: langsetting_exercise
+
+- story: Social_media
+  steps:
+  - intent: social_media
+  - action: utter_somidea
+  - intent: website
+  - action: utter_About
+
+- story: fb_tw
+  steps:
+  - intent: facebook
+  - action: utter_fb
+  - intent: twitter
+  - action: utter_tw
+
+- story: inst_you
+  steps:
+  - intent: instagram
+  - action:  utter_inst
+  - intent: youtube
+  - action: utter_you
+
+- story: link_tele
+  steps:
+  - intent: app1
+  - action: utter_link
+  - intent: telegramg
+  - action: utter_tel
+
+- story: pinst
+  steps:
+  - intent: Pinterest
+  - action: utter_pin
+  - intent: telegramg
+  - action: utter_tel
+
+- story: Destinations_route
+  steps:
+  - intent: Destinations
+  - action: utter_destinations
+  - intent: investment_otc
+  - action: utter_invest
+
+- story: categories_of_the_bot
+  steps:
+  - intent: activities
+  - action: utter_activity
+  - intent: hking
+  - action: utter_king
+
+- story: camping_swimming
+  steps:
+  - intent: cping
+  - action: utter_mping
+  - intent: sming
+  - action: utter_sing
+
+- story: trekking_biwatching
+  steps:
+  - intent: tking
+  - action: utter_reing
+  - intent: bwatching
+  - action: utter_bwing
+
+
+########################################## Categories
+
+- story: accomodation_of_visit_oromia
+  steps:
+  - intent: categories
+  - action: utter_category
+  - intent: covid
+  - action: utter_cov
+
+- story: national_park_bird
+  steps:
+  - intent: npark
+  - action: utter_npark
+  - intent: bird
+  - action: utter_bb
+
+- story: wild_land
+  steps:
+  - intent: w_animals
+  - action: utter_wwanimals
+  - intent: lscape
+  - action: utter_lcape
+
+- story: monument_palace
+  steps:
+  - intent: mmonument
+  - action: utter_mmts
+  - intent: plce
+  - action: utter_pces
+
+- story: water_mountain
+  steps:
+  - intent: wbody
+  - action: utter_wies
+  - intent: mtain
+  - action: utter_mt
+
+
+- story: central_tourism_route
+  steps:
+  - intent: centralTR
+  - action: utter_centralcomponents
+  - intent: central_culture_life_style
+  - action: utter_central_culture_life_style
+
+- story: central_two_culture
+  steps:
+  - intent: two_culture_life_style
+  - action: utter_two_culture_life_style
+  - intent: finfinne_adama_tourist_line
+  - action: utter_fin_to_nazirit
+  - intent: oda_nabe
+  - action: utter_onabe
+  - action: odaaction_exercise
+
+- story: central_two_cafetuma_bishoftu
+  steps:
+  - intent: cafe_tuma
+  - action: utter_ctuma
+  - action: ctumaaction_exercise
+  - intent: bishoftu_town
+  - action: utter_bishoftu
+  - action: btownaction_exercise
+
+- story: lake_harsade
+  steps:
+  - intent: lake_hora_harsade
+  - action: utter_lharsade
+  - action: lakeharsadeaction_exercise
+  - intent: lake_bishoftu
+  - action: utter_lbishoftu
+  - action: lakebishoftuaction_exercise
+
+- story: lake_babo_gayas
+  steps:
+  - intent: lake_babo_gaya
+  - action: utter_lbabogaya
+  - action: babogayaaction_exercise
+  - intent: lake_kuriftu
+  - action: utter_lkuriftu
+  - action: kuriftuaction_exercise
+
+- story: lake_kiloles
+  steps:
+  - intent: lake_kilole
+  - action: utter_lkilole
+  - action: lkiloleaction_exercise
+  - intent: lake_magarisa
+  - action: utter_lmagarisa
+  - action: lmagarisaaction_exercise
+
+- story: mountain_ziqualas
+  steps:
+  - intent: mountain_ziquala
+  - action: utter_mchuqala
+  - action: zuqalaaction_exercise
+  - intent: mountain_yarar
+  - action: utter_myarar
+  - action: myararaction_exercise
+
+- story: adama_sodare_tourist_lines
+  steps:
+  - intent: adama_sodare_tourist_line
+  - action: utter_asodare_tourline
+  - intent: adama
+  - action: utter_ade
+  - action: adamaaction_exercise
+
+- story: oromo_martyr_monuments
+  steps:
+  - intent: oromo_martyr_monument
+  - action: utter_omartyr
+  - action: omartyraction_exercise
+  - intent: garagadi_hot_spring
+  - action: utter_garagadispring
+  - action: garhotspringaction_exercise
+
+- story: boku_steams
+  steps:
+  - intent: boku_steam
+  - action: utter_bsteam
+  - action: bokuaction_exercise
+  - intent: sodare_spa_resort
+  - action: utter_soresort
+  - action: sodarespaaction_exercise
+
+- story: dhera_dilfaqarss
+  steps:
+  - intent: dhera_dilfaqar
+  - action: utter_dhera
+  - action: dheraaction_exercise
+  - intent: finfinne_shashamane_tourist_line
+  - action: utter_fshashe
+
+- story: lake_dambalss
+  steps:
+  - intent: lake_dambal
+  - action: utter_ldambal
+  - action: dambalaction_exercise
+  - intent: lake_langano
+  - action: utter_llangano
+  - action: langanoaction_exercise
+
+- story: abijata_shala_national_parks
+  steps:
+  - intent: abijata_shala
+  - action: utter_ashala
+  - action: abijataaction_exercise
+  - intent: finfinne_ambo_woliso
+  - action: utter_faambow
   
-- story: bot challenge
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: bot_challenge
-  - action: utter_iamabot
 
-- story: about time
+- story: managasha_suba_national_forestss
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
+  - intent: managasha_suba_national_forest
+  - action: utter_msnforest
+  - action: subaaction_exercise
+  - intent: finfinne_alem_church_museum
+  - action: utter_fachmuseum
+  - action: fin_alem_churchaction_exercise
 
-- story: about michu loan
+- story: chilimogaji_forests
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: michu
-  - action: utter_michu
-  - intent: install_michu
-  - action: utter_install_michu
+  - intent: chilimogaji_forest
+  - action: utter_chigajif
+  - action: chilimogajiaction_exercise
+  - intent: lake_dandi
+  - action: utter_ldandi
+  - action: dandiaction_exercise
 
-- story: about language
+- story: ambo_city
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: language
-  - action: utter_language
+  - intent: ambo
+  - action: utter_ambocity
+  - action: amboaction_exercise
+  - intent: direction_wenchi
+  - action: utter_wonchi
+  - action: wenchiaction_exercise
 
-- story: about eligibility
+- story: adadi_mariam_churches
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: eligibility
-  - action: utter_eligibility
+  - intent: adadi_mariam_church
+  - action: utter_amariam
+  - action: adadimariamaction_exercise
+  - intent: finfinne_north_shewa_tourist_line
+  - action: utter_fnorth
+  
 
-- story: about application
+- story: mugar_valley_darba_water_falls
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: application
-  - action: utter_application
+  - intent: mugar_valley_darba_water_fall
+  - action: utter_mug_valley
+  - action: mugar_valleyaction_exercise
+  - intent: monestry_debra_libanos
+  - action: utter_monestry_libanos
+  - action: debra_libanosyaction_exercise
 
-- story: about micro loan 
+- story: portugues_bridges
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: Micro_loan
-  - action: utter_Micro_loan
+  - intent: portugues_bridge
+  - action: utter_pbridge
+  - action: portugues_bridgeaction_exercise
+  - intent: guha_tsion_mariam_washa_michael_church
+  - action: utter_tsion_mariam
+  - action: guha_tsion_mariamaction_exercise
 
-- story: about nano loan 
+- story: southernTR_routes
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: Nano_loan
-  - action: utter_Nano_loan
+  - intent: southernTR
+  - action: utter_southern
+  - intent: southern_culture_life_style
+  - action: utter_sclstyle
 
-- story: about approval of loan 
+- story: sankalle_wild_life_reserves
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: approval_status
-  - action: utter_approval_status
+  - intent: sankalle_wild_life_reserve
+  - action: utter_swlreserve
+  - action: sankalle_wildaction_exercise
+  - intent: forest_scenery_around_guji
+  - action: utter_fsaguji
+  - action: forest_sceneryaction_exercise
 
-  # - intent: repayment
-  # - action: utter_repayment
-  # - intent: disbursement
-  # - action: utter_Disbursement
-  # - intent: interest_rates
-  # - action: utter_interest_rates
-  # - intent: duration
-  # - action: utter_duration
-  # - intent: rejection
-  # - action: utter_rejection
-  # - intent: app_language
-  # - action: utter_app_lang
-  # # - intent: agreement
-  # # - action: utter_agreement
-  # # - intent: document_upload
-  # # - action: utter_document_upload
-  # # - intent: late_payment
-  # # - action: utter_late_payment
-  # # - intent: processing_time
-  # # - action: utter_processing_time
-  # # -intent: reapplication
-  # # - action: utter_reapplication
-
-- story: about time
+- story: mee_boko_gada_sites
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
+  - intent: mee_boko_gada_site
+  - action: utter_mbgadasite
+  - action: mee_bokoaction_exercise
+  - intent: destination_around_borana
+  - action: utter_daborana
+  - action: around_boranaaction_exercise
+
+- story: town_mega_yabelos
+  steps:
+  - intent: town_mega_yabelo
+  - action: utter_tmyabelo
+  - action: town_mega_yabeloaction_exercise
+  - intent: bokes
+  - action: utter_bke
+  - action: bokesaction_exercise
+
+- story: south_western_route
+  steps: 
+  - intent: southwestTR
+  - action: utter_swesterntr
+  - intent: south_western_tourist_route
+  - action: utter_swtroute
+
+- story: south_western_culture_lifestyles
+  steps: 
+  - intent: south_western_culture_lifestyle
+  - action: utter_swclstyle
+  - intent: District_galana_abaya
+  - action: utter_dgabaya
+  - action: galana_abayaaction_exercise
+
+- story: wallame_hot_springs
+  steps: 
+  - intent: wallame_hot_spring
+  - action: utter_whspring
+  - action: wallame_hot_springaction_exercise
+  - intent: gibe_gorge
+  - action: utter_ggorge
+  - action: gibe_gorgeaction_exercise
+
+- story: jimmas
+  steps: 
+  - intent: jimma
+  - action: utter_jim
+  - action: jimmaaction_exercise
+  - intent: aba_jifar_palace
+  - action: utter_ajpalace
+  - action: aba_jifar_palaceaction_exercise
+
+- story: tropical_forest_jimma_illuababoras
+  steps: 
+  - intent: tropical_forest_jimma_illuababora
+  - action: utter_tfjiabora
+  - action: tropical_forest_jimma_illuababoraaction_exercise
+  - intent: falls_around_jimma_Hu
+  - action: utter_faj_hu
+  - action: falls_around_jimma_Huaction_exercise
+
+- story: sor_water_falls
+  steps: 
+  - intent: sor_water_fall
+  - action: utter_sowfall
+  - action: sor_water_fallaction_exercise
+  - intent: gore_town
+  - action: utter_got
+  - action: gore_townaction_exercise
+
+- story: south_eastern_tourism_route
+  steps: 
+  - intent: southeastTR
+  - action: utter_seasterntr
+  - intent: south_eastern_culture_life_style
+  - action: utter_seclstyle
+
+- story: museums_arsi_asalas
+  steps: 
+  - intent: museums_arsi_asala
+  - action: utter_maadistrict
+  - action: museums_arsi_asalaaction_exercise
+  - intent: anole_martyr_monument
+  - action: utter_ammonument
+  - action: anole_martyr_monumentaction_exercise
+
+- story: arsi_mountains_national_parks
+  steps: 
+  - intent: arsi_mountains_national_park
+  - action: utter_amnpark
+  - action: arsi_mountains_national_parktaction_exercise
+  - intent: dodola_adaba_forest
+  - action: utter_dodolaaf
+  - action: dodola_adaba_forestaction_exercise
+
+- story: bale_moountains_national_parks
+  steps: 
+  - intent: bale_moountains_national_park
+  - action: utter_bmnpark
+  - action: bale_moountains_national_parkaction_exercise
+  - intent: sanate
+  - action: utter_snate
+  - action: sanateaction_exercise
+
+- story: mada_walabus
+  steps: 
+  - intent: mada_walabu
+  - action: utter_mwalabu
+  - action: mada_walabuaction_exercise
+  - intent: sof_umar_cafe
+  - action: utter_sucave
+  - action: sof_umar_cafeuaction_exercise
+
+- story: dire_sheikh_husseins
+  steps: 
+  - intent: dire_sheikh_hussein
+  - action: utter_dshhussein
+  - action: dire_sheikh_husseinaction_exercise
+  - intent: wabe_gorge
+  - action: utter_wgorge
+  - action: wabe_gorgeaction_exercise
+
+- story: eastern_route
+  steps: 
+  - intent: easternTR
+  - action: utter_easterntr
+  - intent: eastern_tourist_route
+  - action: utter_etourismr
+
+- story: asabo_mountains_monestrys
+  steps: 
+  - intent: asabo_mountains_monestry
+  - action: utter_ammonestry
+  - action: asabo_mountains_monestryaction_exercise
+  - intent: jalo_kunni_mukhtar_forest
+  - action: utter_ajkmforest
+  - action: jalo_kunni_mukhtar_forestaction_exercise
+
+- story: oda_bultums
+  steps: 
+  - intent: oda_bultum
+  - action: utter_obultum
+  - action: oda_bultumaction_exercise
+  - intent: burka_kobtu_sama_hot_spring
+  - action: utter_bkshspring
+  - action: burka_kobtu_sama_hot_springaction_exercise
+
+- story: chororapithecuss
+  steps: 
+  - intent: Chororapithecus
+  - action: utter_Chorora
+  - action: Chororapithecusaction_exercise
+  - intent: harala_ruins
+  - action: utter_hruins
+  - action: harala_ruinsaction_exercise
+
+- story: dindin_forests
+  steps: 
+  - intent: dindin_forest
+  - action: utter_dforest
+  - action: dindin_forestaction_exercise
+  - intent: chalanko_oromo_martyr_memorial_monument
+  - action: utter_commmonument
+  - action: chalanko_oromo_martyr_memorial_monumentaction_exercise
+
+- story: dire_dawas
+  steps: 
+  - intent: dire_dawa
+  - action: utter_ddawa
+  - action: dire_dawaaction_exercise
+  - intent: babile_elephant_sanctuary
+  - action: utter_besanctuary
+  - action: babile_elephant_sanctuaryaction_exercise
+
+- story: unique_rock_formation_babiles
+  steps: 
+  - intent: unique_rock_formation_babile
+  - action: utter_urfbabbile
+  - action: unique_rock_formation_babileaction_exercise
+  - intent: mountain_kundudo
+  - action: utter_mkundudo
+  - action: mountain_kundudoaction_exercise
+
+- story: dima_caves
+  steps: 
+  - intent: dima_cave
+  - action: utter_dcave
+  - action: dima_caveaction_exercise
+  - intent: oromo_cave
+  - action: utter_ocave
+  - action: oromo_caveaction_exercise
+
+- story: western_route
+  steps: 
+  - intent: historical_mosques
+  - action: utter_hmosques
+  - action: historical_mosquesaction_exercise
+  - intent: westernTR
+  - action: utter_westerntr
+
+- story: western_tourst_route
+  steps: 
+  - intent: western_tourist_route
+  - action: utter_wtroute
+  - intent: western_culture_life_style
+  - action: utter_wclstyle
+
+- story: oda_buluk_gada_sites
+  steps: 
+  - intent: oda_buluk_gada_site
+  - action: utter_obgsite
+  - action: oda_buluk_gada_siteaction_exercise
+  - intent: fincha_dam
+  - action: utter_fdam
+  - action: fincha_damaction_exercise
+  
+- story: bareda_angar_water_falls
+  steps: 
+  - intent: bareda_angar_water_fall
+  - action: utter_bawfall
+  - action: bareda_angar_water_fallaction_exercise
+  - intent: dhati_walal_park
+  - action: utter_dhwpark
+  - action: dhati_walal_parkaction_exercise
+
+- story: keto_water_falls
+  steps: 
+  - intent: keto_water_fall
+  - action: utter_kwfall
+  - action: keto_water_fallaction_exercise
+  - intent: walal_shabal
+  - action: utter_wshcagjforest
+  - action: walal_shabalaction_exercise
+  ################################################################
+
+# - story: wenchi_in_detail
+#   steps: 
+#   - intent: wenchi_in_detail 
+#   - slot_was_set:
+#     - wenchi_in_detail: wenchi_in_detail
+#   - action: utter_wenchi_in_detail
+  
+# - story: wimage path 
+#   steps: 
+#   - intent: wimage
+#   - slot_was_set:
+#     - pictures: pictures
+#   - action: utter_pictures
+
+# - story: wvideo path
+#   steps:
+#   - intent: wvideo
+#   - slot_was_set:
+#     - video: video
+#   - action: utter_video
+ #########################################################################################
+# - story: first path
+#   steps:
+#   - intent: FirstName
+#   - slot_was_set:
+#     - firstN: firstN
+#   - action: utter_ask_firstN
+
+# - story: last path
+#   steps:
+#   - intent: LastName
+#   - slot_was_set:
+#     - lastN: lastN
+#   - action: utter_ask_lastN
+
+# - story:  path
+#   steps:
+#   - intent: request_details 
+#   - slot_was_set:
+#     - feedback: feedback
+#   - action: utter_ask_feedback
+# story: happy path
+# * request_details 
+#         - form_info 
+#         - form{"name":"form_info"} 
+#         - form{"name":null
+
+# - story: explain firstN slot
+#   steps:
+#   - intent: request_form
+#   - action: form_info
+#   - active_loop: form_info
+#   - slot_was_set:
+#     - requested_slot: firstN
+#   - intent: request_form
+#   - action: utter_ask_firstN
+#   - action: form_info
+#   - active_loop: null
+
+# - story: explain last slot
+#   steps:
+#   - intent: request_form
+#   - action: form_info
+#   - active_loop: form_info
+#   - slot_was_set:
+#     - requested_slot: firstN
+#   - slot_was_set:
+#     - requested_slot: lastN
+#   - intent: request_form
+#   - action: utter_ask_lastN
+#   - action: form_info
+#   - active_loop: null
+
+# - story: explain feedback slot
+#   steps:
+#   - intent: request_form
+#   - action: form_info
+#   - active_loop: form_info
+#   - slot_was_set:
+#     - requested_slot: firstN
+#   - slot_was_set:
+#     - requested_slot: lastN
+#   - slot_was_set:
+#     - requested_slot: feedback
+#   - intent: request_form
+#   - action: utter_ask_feedback
+#   - action: form_info
+#   - active_loop: null
+   
+# - story: affirm path
+#   steps:
+#   - intent: affirm 
+#   - action: action_submit
+#   - action: utter_submit
+  
+  
+# - story: deny path
+#   steps:
+#   - intent: deny 
+#   - action: utter_thanks
+
+
+
+
 
 

@@ -1,24 +1,24 @@
 FROM rasa/rasa:2.8.0
-WORKDIR '/app'
-COPY . /app
-USER root
-# WORKDIR /app
+# WORKDIR '/app'
 # COPY . /app
-COPY ./data /app/data
-COPY ./models /app/models
-RUN mkdir /app/certs
-COPY server.p12 /app/certs/server.p12
-RUN  rasa train
-VOLUME /app
-VOLUME /app/data
-VOLUME /app/models
+# USER root
+# # WORKDIR /app
+# # COPY . /app
+# COPY ./data /app/data
+# COPY ./models /app/models
+# RUN mkdir /app/certs
+# COPY server.p12 /app/certs/server.p12
+# RUN  rasa train
+# VOLUME /app
+# VOLUME /app/data
+# VOLUME /app/models
 
-ENV SSL_CERTIFICATE_PATH="/app/certs/server.p12"
-ENV SSL_CERTIFICATE_KEY_PATH="/app/certs/server.p12"
-ENV SSL_CERTIFICATE_PASSWORD="Coop#4321"
-ENV PORT=8443  
-# Use the desired port, e.g., 443 or 8443
+# ENV SSL_CERTIFICATE_PATH="/app/certs/server.p12"
+# ENV SSL_CERTIFICATE_KEY_PATH="/app/certs/server.p12"
+# ENV SSL_CERTIFICATE_PASSWORD="Coop#4321"
+# ENV PORT=8443  
+# # Use the desired port, e.g., 443 or 8443
 
-# If the certificate is password-protected, provide the password here
+# # If the certificate is password-protected, provide the password here
 
-CMD ["run","-m","/app/models","--enable-api","--cors","*","--debug" ,"--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]
+# CMD ["run","-m","/app/models","--enable-api","--cors","*","--debug" ,"--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]
