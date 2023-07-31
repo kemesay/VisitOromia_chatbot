@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "https://34.240.60.217:8443/webhook"
+ url: "https://34.240.60.217:443/webhook"
 # action_endpoint:
 #  url: "http://3.129.70.211:8000/webhook"
 
