@@ -1,47 +1,47 @@
-# version: '3'
-# services:
-#     rasa:
-#       container_name: "rasa_server"
-#       user: root
-#       build: 
-#         context:  .
-#       volumes:
-#       - "./:/app"
-#       - "./certs:/app/certs"
-#       ports: 
-#         - "8443:8443"
-#     action_server:
-#       container_name: "action_server"
-#       build:
-#         context: actions
-#       volumes:
-#         - "./actions:/app/actions"
-#         - "./models:/app/models"
-#         - "./data:/app/data"
-#       ports:
-#         - "5055:5055"
-#     #   depends_on:
-#     #     - rasa-production
+version: '3'
+services:
+    rasa:
+      container_name: "rasa_server"
+      user: root
+      build: 
+        context:  .
+      volumes:
+      - "./:/app"
+      - "./certs:/app/certs"
+      ports: 
+        - "8443:8443"
+    action_server:
+      container_name: "action_server"
+      build:
+        context: actions
+      volumes:
+        - "./actions:/app/actions"
+        - "./models:/app/models"
+        - "./data:/app/data"
+      ports:
+        - "5055:5055"
+    #   depends_on:
+    #     - rasa-production
 
-#     # rasa-production:
-#     #   image: "rasa/rasa:latest-full"
-#     #   ports:
-#     #     - "5005:5005"  
-#     #   volumes:
-#     #     - "./data:/app/data " 
-#     #     - "./models:/app/models" 
-#     #     - "./config:/app/config " 
-#     #   command:
-#     #     - "run"
-#     #     - "--enable-api"
-#     #     - "--cors"
-#     #     - "*"
-#     #     - "--debug"
+    # rasa-production:
+    #   image: "rasa/rasa:latest-full"
+    #   ports:
+    #     - "5005:5005"  
+    #   volumes:
+    #     - "./data:/app/data " 
+    #     - "./models:/app/models" 
+    #     - "./config:/app/config " 
+    #   command:
+    #     - "run"
+    #     - "--enable-api"
+    #     - "--cors"
+    #     - "*"
+    #     - "--debug"
 
-#     # rasa-shell:
-#     #  image: rasa/rasa:3.6.2-full
-#     #  command: shell --endpoints http://rasa:443
-#     #  ports:
-#     #   - "5055:5055"
+    # rasa-shell:
+    #  image: rasa/rasa:3.6.2-full
+    #  command: shell --endpoints http://rasa:443
+    #  ports:
+    #   - "5055:5055"
 
     
