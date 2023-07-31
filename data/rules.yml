@@ -13,7 +13,7 @@ rules:
   - action: utter_iamabot
 
 # - rule: Fallback rule
-#   steps:
+  # steps:
 #   - intent: nlu_fallback
 #   - action: action_fallback
 #   # - active_loop: null
