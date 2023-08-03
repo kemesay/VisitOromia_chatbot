@@ -831,10 +831,8 @@ responses:
   utter_gallery_pictures:
    - text: "This is multiple pictures of visit oromia"
 
-  utter_gallery_videos:
-   - text: "This is multiple videos of visit oromia"
-
-      
+  # utter_gallery_videos:
+  #  - text: "This is multiple videos of visit oromia"    
 ##################################################################################
   utter_centralcomponents:
     - text: "The central Oromia tourist route is an area covering an average distance of
@@ -971,7 +969,8 @@ responses:
             throughout the year, Bishoftu's tourist offer is characterized by a cluster of volcanic crater lakes
             and popular spiritual sites that made around the town. Because of its altitude (up to 1850 masl),
             Bishoftu area has warm climate. The followings are the major resort lakes for tourists who
-            come to the town for leisure and recreation purposes. Besides the lakes and Mountains in and around Bishoftu the town has the following to offer for
+            come to the town for leisure and recreation purposes. Besides the lakes and Mountains in and around
+             Bishoftu the town has the following to offer for
             its guests. Africa Art Gallery established by famous artist Captain Lemma Guys and Deshet
             Herbal Medicine and Cultural Centre. African art gallery is one of the main tourist attractions in
             the town drawing attention of many visitors from the capital city and from abroad. Deshet

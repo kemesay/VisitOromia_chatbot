@@ -1,4 +1,4 @@
-FROM rasa/rasa:2.8.0
+FROM rasa/rasa:3.6.2
 WORKDIR '/app'
 COPY . /app
 USER root
@@ -6,6 +6,9 @@ USER root
 # COPY . /app
 COPY ./data /app/data
 COPY ./models /app/models
+# COPY ./data /app/data
+# COPY ./models /app/models
+
 RUN mkdir /app/certs
 COPY server.p12 /app/certs/server.p12
 RUN  rasa train
@@ -21,4 +24,46 @@ ENV PORT=8443
 
 # If the certificate is password-protected, provide the password here
 
-CMD ["run","-m","/app/models","--enable-api","--cors","*","--debug" ,"--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]
+# CMD ["run","-m","/app/models","--enable-api","--cors","*","--debug" ,"--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]
+
+CMD [ "run" ]
+
+
+
+
+# version: '3'doc
+# services:
+#     rasa:
+#       container_name: "rasa_server"
+#       user: root
+#       build: 
+#         context:  .
+#       volumes:
+#       - "./:/app"
+#       ports: 
+#         - "5005:5005"
+#     action_server:
+#       container_name: "action_server"
+#       build:
+#         context: actions
+#       volumes:
+#         - ./actions:/app/actions
+#         - ./data:/app/data
+#       ports:
+#         - 5055:5055
+    
+    # rasa-shell:
+    # image: rasa/rasa:2.8.1-full
+    # command: shell --endpoints http://rasa:5005
+    # ports:
+    #   - "8000:8000"
+
+
+
+    # FROM rasa/rasa-sdk:3.6.1
+# WORKDIR /app
+# COPY requirements.txt requirements.txt
+# USER root
+# RUN pip install --verbose -r requirements.txt
+# EXPOSE 5055
+# USER 1001

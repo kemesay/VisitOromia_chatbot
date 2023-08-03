@@ -9,8 +9,8 @@ from typing import Any, Text, Dict, List, Union
 # from rasa_core.agent import Agent
 from rasa_sdk import Action, Tracker
 # from rasa import Action
-from telegram import MenuButton, InlineKeyboardButton, update, KeyboardButton, replymarkup
-from telegram.ext import(callbackcontext, Filters   ,Updater, CommandHandler, callbackqueryhandler, CallbackContext)
+# from telegram import MenuButton, InlineKeyboardButton, update, KeyboardButton, replymarkup
+# from telegram.ext import(callbackcontext, Filters   ,Updater, CommandHandler, callbackqueryhandler, CallbackContext)
 
 from rasa_sdk.interfaces import Action
 from rasa_sdk.executor import CollectingDispatcher

@@ -20,23 +20,23 @@ services:
         - "./data:/app/data"
       ports:
         - "5055:5055"
-      depends_on:
-        - rasa-production
+      # depends_on:
+      #   - rasa-production
 
-    rasa-production:
-      image: "rasa/rasa:latest-full"
-      ports:
-        - "5005:5005"  
-      volumes:
-        - "./data:/app/data " 
-        - "./models:/app/models" 
-        - "./config:/app/config " 
-      command:
-        - "run"
-        - "--enable-api"
-        - "--cors"
-        - "*"
-        - "--debug"
+    # rasa-production:
+    #   image: "rasa/rasa:latest-full"
+    #   ports:
+    #     - "5005:5005"  
+    #   volumes:
+    #     - "./data:/app/data " 
+    #     - "./models:/app/models" 
+    #     - "./config:/app/config " 
+    #   command:
+    #     - "run"
+    #     - "--enable-api"
+    #     - "--cors"
+    #     - "*"
+    #     - "--debug"
 
     # rasa-shell:
     #  image: rasa/rasa:3.6.2-full
