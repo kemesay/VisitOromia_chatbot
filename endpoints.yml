@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-  url: "http://54.155.201.106:8443"
+  url: "http://52.212.99.214:5005/weebhook"
 # action_endpoint:
 #  url: "http://3.129.70.211:8000/webhook"
 
