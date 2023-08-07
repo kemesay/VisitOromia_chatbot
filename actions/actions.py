@@ -594,7 +594,6 @@ class Actionportugues_bridge(Action):
         dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=-3Ro7Y0ORFU")
         dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=mDBT7WTZemk")
         dispatcher.utter_message(attachment="https://youtu.be/4X9jjM6iGK8")
-        
         dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/svg/one.png")
         dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png")
   

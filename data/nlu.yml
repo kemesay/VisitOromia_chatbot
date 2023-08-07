@@ -129,13 +129,13 @@ nlu:
    - help me with photo
    - help me with image
 
-# - intent: video_gallery
-#   examples: |
-#    - what is the video of visit oromia
-#    - what is video
-#    - visit oromia video
-#    - help me with video
-#    - help me with videos
+- intent: video_gallery
+  examples: |
+   - what is the video of visit oromia
+   - what is video
+   - visit oromia video
+   - help me with video
+   - help me with videos
 
 
 # - intent: tour_opertaor
@@ -501,7 +501,7 @@ nlu:
    - list criteria of care covid_19 information in ethiopia
 
 #######################################################################################################
-# # #  language setting 
+# #  language setting 
 # - intent: Language_setting
 #   examples: | 
 #    - I want to change language

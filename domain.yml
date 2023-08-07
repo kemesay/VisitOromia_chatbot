@@ -33,7 +33,7 @@ intents:
   # - life_chat
   - gallery
   - image_gallery
-  # - video_gallery
+  - video_gallery
 
 
   - Destinations
@@ -831,8 +831,8 @@ responses:
   utter_gallery_pictures:
    - text: "This is multiple pictures of visit oromia"
 
-  # utter_gallery_videos:
-  #  - text: "This is multiple videos of visit oromia"    
+  utter_gallery_videos:
+   - text: "This is multiple videos of visit oromia"    
 ##################################################################################
   utter_centralcomponents:
     - text: "The central Oromia tourist route is an area covering an average distance of
@@ -902,11 +902,11 @@ responses:
        agriculturalists that made their life in crop production except the Karayu who is largely pastoral
        community. The Jile Oromo who belong to the Tulama clan are known by their unique hairstyle   
        like their neighbors, the Karayu"
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
   
   utter_two_culture_life_style:
     - text: "The Tulama of North Shawa are known by their art of making colorful house ware from grass.
@@ -916,11 +916,11 @@ responses:
         Aba followed by the name of the horse meaning the Owner of so called horse
         The Arsi people are also known by their colorful dressing and their decorated vessels called "
 
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_onabe:
     - text: "Oda Nabe (The Tulama Oromo Gada Site) Immediately after crossing the boundary of Oromia
@@ -932,36 +932,23 @@ responses:
            Tulama Oromo Gada system take place like, the power transfer ceremony and Gada Assemblies.
            Around Oda Nabe there are sites in all directions which hold important place in the Tulama Gada
            system like. "
-    - 
-      buttons: 
-        - 
-          payload: "Adventure - Adrenaline"
-          title: "Adventure - Adrenaline"
-        - 
-          payload: Nature
-          title: Nature
-        - 
-          payload: Relaxation
-          title: Relaxation
-      text: "What kind of trip are you looking for?"
-
-      
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+  
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_ctuma:
     - text: "A place where Gada laws are drafted and modified, Andode Tuma A place where Gada laws are
             publicized (announced). Presently Activities are underway to construct Gada convention centre,
             Museum and offices in modern way by joint effort of all stakeholders at Oda Nabe. This site will
             have great significance in teaching and research activities of the Oromo people's culture."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_bishoftu:
     - text: "A town at distance of 47 kilometers South of Finfinnee on main asphalt road is an easily
@@ -977,11 +964,11 @@ responses:
             Herbal Medicine and Museum of Cultural collection established by Hakim Abebech is another
             site of special interest. The mini-museum contains variety of ethnological and cultural
             collections that are especially dedicated to Oromo and Walaita artifacts."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_lharsade:
     - text: "This lake is the oldest known lake resort in the town is only 2 kilometers drive from the center of
@@ -996,22 +983,22 @@ responses:
             people pray to God for the good will and well being of their cattle and family, in the coming year.
             This ceremony where young Oromo are seen in their colorful traditional clothing, dancing and
             singing is worth visiting in the area."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
         
   utter_lbishoftu:
     - text: "Having a maximum depth of 85 meters and it is probably the deepest of the surrounding lakes.
             The attractive feature of the lake is its scenic beauty. The beautiful surrounding rocky steep also
             invites for sightseeing and nature admiring. Bushoftu Afaf Hotel and Dream Land Resort are the
             ideal sites to enjoy the scenery."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_lbabogaya:
     - text: "Lake Babogaya is nearly of the same size but much deeper than Hora. It is at North East of Hora
@@ -1021,37 +1008,37 @@ responses:
               Kuriftu-Very close to Babogaya this lake has now become one of the country's best known
               resort centre. The privately owned resort centre Kuriftu resort is ideal place for tourists to visit
               and stay In."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_lkuriftu:
     - text: "Lake Kuriftu;Very close to Babogaya this lake has now become one of the country's best known resort centre. The privately owned resort centre Kuriftu resort is ideal place for tourists to visit and stay in."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_lkilole:
     - text: "kilole lake is 12 kilometers hard drive north east of the town. It is the farthest of the lakes in the area.Birds like water fowls, African fish eagles, Cormorants, Egyptian geese, ducks, plovers etc. areasily observed here."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_lmagarisa:
     - text: "Lake Magarisa meaning, Green Lake, is about 9 kilometers south west of the town just behind the Air Force base.
              The lake looks green because of its algae formation. It is more dramatic colorful and beautiful when viewed against
              the backdrop of the surrounding hills. Though scenic and beautiful it is quite lake with no activity around"
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload:  "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload:  "/wvideo"
 
   utter_mchuqala:
     - text: "The Chuqala Mountain, located at a distance of 27 kilometers South West of Bishoftu town is
@@ -1068,11 +1055,11 @@ responses:
             Traditional dance and the folk culture on the eventful ceremony; The clear and supposedly holy
             water of the crater lake on its top, and diverse vegetation that cover (about 197 hectares) of a
             natural forest around the crater lake and others."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_myarar:
     - text: "Mt. Yarar, found 12 kilometers north of Bishoftu is best known for the church of Trinity located
@@ -1081,11 +1068,11 @@ responses:
             offer of a pleasurable hiking opportunity to the energetic. The peculiar attraction offer of the
             mountain also involve the pleasant atmosphere of the high altitude forest habitat which is good
             for camping and ffor trekking on foot or on horseback."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_asodare_tourline:
    - text: " Adama to Sodare Tourist Line"
@@ -1110,11 +1097,11 @@ responses:
               the fast growing town serving as industrial, commercial and conference centre in the country.
               The town is also encircled by a variety of tourist attractions. Major attractions in the town
               include."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_omartyr:
     - text: "The statue show the Oromo patriots who give up their life in order to destroy the dictator Dergue
@@ -1125,11 +1112,11 @@ responses:
               conference facilities, the Aba Gada conference and convention centre, the location of the town,
               the warmth of its climate, make the town of Adama an important tourist destination and
               weekend retreat centre in the country"
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_garagadispring:
     - text: "Garagadi Hot Spring is about 12 kilometers south west of Adama near the town and the sugar
@@ -1140,11 +1127,11 @@ responses:
             healing of physical ailments. Garagadi hot spring site is one of the important tourism
             development potential sites in Oromia for spa resort development. Sightseeing includes view of
             the nearby Awash River and inhabiting crocodiles and other aquatic life."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_bsteam:
     - text: "Situated on the slope of a gorgeous land, Boku geothermal steam bath centre is some 7
@@ -1154,11 +1141,11 @@ responses:
               asthma and other complications \n
                An opportunity for bird watching and its surrounding scenic land formation with its vegetation and others. It is accessible (from Adama) by car on a gravel road. Its service,
               however, need to be transformed to high standard multifaceted tourist service"
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_soresort:
     - text: "Spa Resort Being 27 kilometers from Adama, the Sodare Spa Resort is the most developed and
@@ -1169,22 +1156,22 @@ responses:
                Thermal baths (indoor and open air) \n
                Fishing and enjoying the warm climate and \n
                the beautiful scenery of surrounding vegetation inhabited by monkey"
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_dhera:
     - text: "Dhera Dilfagar Proposed Park is south of Adama on the way to Asala. Having an area of 25
               square kilometers, the park hosts about 23 mammals and more than 100 bird species. The
               major mammals include greater Kudu, lesser Kudu, klipspringer, Caracal, Striped Hyena, silver
               backed Jackal, Grey duiker and others. The animals can be observed in the morning and evening."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_fshashe:
     - text: "Finfinne to shashamane tourist line: This line shares attractions around Bishoftu town explained in the preceding section. Hence we
@@ -1222,11 +1209,11 @@ responses:
               weathered popular destination is an ideal place of fishing, boating, bird watching,water
               transportation for island and monasteries touring. Dambal (Ziway) town is the closest lake side
               town that offers tourist recommended accommodations and national dishes."
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_llangano:
     - text: "Lake Langano (Resort Area) ;is about 218 kilometers from Finfinnee at Bekele Molla Hotel. The
@@ -1239,11 +1226,11 @@ responses:
               while the eastern shore is partially covered by pristine dense forest patches. Langano is such a
               big potential for tourism development that many investors nowadays are being attracted
               towards it. "
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
 
   utter_ashala:
     - text: "At about 215 kilometers from Finfinnee, visitors will arrive at Abijata-Shala lakes National Park
@@ -1275,11 +1262,11 @@ responses:
             alkaline Crater Lake known as Lake Chitu. This small lake, more than any other lake, is the best
             site of bird watching, especially the flamingoes. Chitu is accessible by four wheel drive via
             Sanbate town. "
-      # buttons:
-      # - title: "In picture"
-      #   payload: "/wimage"
-      # - title: "In video"
-      #   payload: "/wvideo"
+      buttons:
+      - title: "In picture"
+        payload: "/wimage"
+      - title: "In video"
+        payload: "/wvideo"
   utter_faambow:
    - text: " Tour to this small tourist line can be made on a circular line as Finfinnee-Ambo-Woliso and back
               to Finfinnee or Vice Versa to explore as much destinations as possible. Visitors can also
@@ -1319,11 +1306,11 @@ responses:
               The majestic beauty of Mogli peak and surrounding scenery would all together made the Suba
               Forest area an ideal place for nature lovers, such as hikers, trekkers and sight seers, forest
               explorers, scenery admirers, etc "
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_fachmuseum:
      - text: "Fifty five kilo meters from Finfinnee on the same way to Ambo is a small town of Finfinnee Alem known for its 
@@ -1331,11 +1318,11 @@ responses:
           before Finfinnee Alem was abanded as impossible capital. Influenced by Indian, Pakistan and Iranian architecture, the design and 
           decoration of the church building is unique. The other main attraction in the church compound is the museum with historical 
           antiquities of royal families and religious manuscripts. "
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_chigajif:
      - text: "53 Chilimogaji Forest Chilimogaji Forest: At Ginchi town a gravel road of only 7 kilometers
@@ -1350,11 +1337,11 @@ responses:
             distance. The metal ladder that by time leant against the tree is at this time almost sunk into its
             body while the tree still stands unaffected. Chilimo Forest is an ideal site for forest exploring,
             scenery admiring, camping etc. "
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ldandi:
      - text: "Back to Ginchi another road of 50kilometers forks to the left, hand side from Ginchi leading to
@@ -1363,15 +1350,15 @@ responses:
             by semi flat and barren uplands. Lacking green vegetation its beauty relied on white colored
             water with shape of number 8. The scenery can be enhanced if the area is covered with green
             vegetation by reforestation."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
 
   utter_ambocity:
-     - text: "Carrying on along the main road past Ginchl, Ambo is reached after about half an hour drive,
+      - text: "Carrying on along the main road past Ginchl, Ambo is reached after about half an hour drive,
               Ambo, the capital of West Shawa Zone is situated 125kilometers west of Finfinnee, The area Is
               especially famed by its sparkling mineral water 'Ambo Wuha', The mineral water of Ambo which
               gained reputation throughout Ethiopia is processed and bottled here, Hot Spring baths, the
@@ -1380,14 +1367,14 @@ responses:
               Vicinity of Ambo is also endowed with sites of natural magnificence, Huluqa, Guder and Teltele
               waterfalls are among remarkable sites worth visiting especially during rainy seasons, Integrated
               into scenic land formation of the valley, Teltele farm is an ideal spot for sightseeing and relaxing "
-                    #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+        buttons:
+        - title: "In picture"
+          payload: "/wimage"
+        - title: "In video"
+          payload: "/wvideo"
 
   utter_wonchi:
-     - text: "Crater Lake Wanchi Crater Lake: Wanchi is the picturesque lake situated about 32kilometers
+      - text: "Crater Lake Wanchi Crater Lake: Wanchi is the picturesque lake situated about 32kilometers
               south west of Ambo on the road to Woliso nearly half way between the two towns. Coming from
               Ambo or from Woliso to Wanchi Crater Lake the gravel road ascends mountain slopes almost to
               the rim of the crater where the height reaches 3386m at a peak. Here green oasis, (when
@@ -1414,11 +1401,11 @@ responses:
               natural resources, The lodge thus offers neatly and beautifully built : . :- swimming pool, spa
               bath houses, lodging services, cultural cottages and fyH natural forests harboring gureza,
               monkey and birds of various type."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+        buttons:
+        - title: "In picture"
+          payload: "/wimage"
+        - title: "In video"
+          payload: "/wvideo"
 
   utter_amariam:
      - text: "Adadi Mariam Church: Further drive of 23kilometers from Awash Malka Kunture (including
@@ -1432,11 +1419,11 @@ responses:
               Regional State of Southern Ethiopian People. Here one can see 36 ancient stelae or obelisks,
               thirty one of which are decorated with carvings, And the tallest of them is 3,7m,to twelve
               kilometers, Adadi Mariam Church and the stelae of Tiy"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
 
   utter_fnorth:
@@ -1461,11 +1448,11 @@ responses:
             just at walking distance from the Cement Factory.
             Being seasonal waterfall, Darba could be observed best during the peak months of river volume,
             July through October. Mugar Valley and the waterfall offer visitors quite fascinating view."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_monestry_libanos:
      - text: "Monastery of Debre Libanos: The monastery of Debre Libanos is found at 107 kilometers north
@@ -1475,11 +1462,11 @@ responses:
               modern church with beautiful architecture. Interior paintings of the church and historical
               antiquities in the modern and wel organized museum of the church add to attraction of the
               monastery."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_pbridge:
      - text: "The Portuguese Bridge: Built in 16th century by the Portuguese bridge is another historical
@@ -1489,11 +1476,11 @@ responses:
               could also contribute to scenic beauty of the site,
               Nowadays the topography of this site and the gorge is attracting tourists who are interested in
               paragliding sport activity."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
   utter_tsion_mariam:
      - text: "The historic Goha Tsiyon Mariyam Church was founded first in 1864 and rebuilt in 20th century
               is situated on southern edge of Abay (Blue Nile) Gorge in Goha Tsiyon town. This church is
@@ -1509,11 +1496,11 @@ responses:
               called North Shawa Zone of Oromia and East Gojam Zone of Amhara Regional States. The ascent
               from the bridge to Dejen town in Gojam takes about the same time as the descent from Goha
               Tsiyon, Blue Nile gorge is wonderful natural scenery which is usually admired by travelers"
-                    #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_southern:
    - text: "The south Oromian tourist route starts from the town of Shashamane. Here the route starts with\n\
@@ -1572,11 +1559,11 @@ responses:
               wildlife helped the conservation of natural environment. Now a days this region is best in its wild
               life resources than any other area in the country, N This region is known as major source of
               livestock in the country for local consumption as well as for export"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_swlreserve:
      - text: "According to our classification of tourist Routes in Oromia, the Southern route starts from
@@ -1603,11 +1590,11 @@ responses:
               development of tourist services in the lakes shore by the side of the town (eastern shore)
               service development is not seen on the western shore. Therefore the area offers the best
               opportunity for those interested in investing in the sector."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
 
   utter_fsaguji:
@@ -1625,11 +1612,11 @@ responses:
               of dense forest made it the real home of many mammals, birds and reptiles. The area thus
               claims more than 44 mammal and 274 bird species. This is also an area where most of the
               contry's gold is produced."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
 
   utter_mbgadasite:
@@ -1642,11 +1629,11 @@ responses:
               • Gololcha Fooka and Darartu in Adola where newly elected Aba Gada settles.
               • Chirate in Adola is where the three Yasa's, (the multitude or the Great Assembly) Gada, Dori,
               Raba settle for ceremonial events"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_daborana:
      - text: "After completing your travel in Guji area, you are left with the Borana area to complete the
@@ -1655,11 +1642,11 @@ responses:
               you will enjoy your travel watching wild life like-Gazle, Dikdik, Klipspringer, Warthog by the side
               of the Road, If you are lucky you will find biggame animals like Giraffe, Elephant and Lion on this
               way."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_tmyabelo:
      - text: "You have to spend some days in the town of Mega and Yabello to explore the natural wonders,
@@ -1669,11 +1656,11 @@ responses:
               19th century. of Mega and Yabello to explore the natural wonders, wild life and culture of the
               people in the area. The town of Mega has also historical significance in serving as the centre of
               British consulate for Southern Ethiopia in the 19th century."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_bke:
      - text: "
@@ -1695,11 +1682,11 @@ responses:
           localities in Borana where Tulas are found of which Melbana and Web are the most famous and
           easily accessible Tula sites.
           appeals to visitors."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_swesterntr:
    - text: "The south western Oromian Tourist route starts foom the scenic gorge of give river and
@@ -1748,11 +1735,11 @@ responses:
               • Ardoti Liban where Gada Mojii hold ceremonial process of retiring.\n
               • Kalicha Game Liban where !joie game (youngsters age group with game) on the li ne undertake
               initiatioanal ceremony."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_swclstyle:
      - text: "The Oromo people who occupy south western part of the region are the macha belong to the
@@ -1772,11 +1759,11 @@ responses:
               work visiting.
               The peoples culture, history, tradition and resources are welkept in Jima museum and king Aba
               Jifar .s palace at Jima where visitor can enjoy."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dgabaya:
      - text: "Shaphe Rock Carving is an ancient rock carving in Galana Abbaya District found at a place
@@ -1787,11 +1774,11 @@ responses:
               Oromia. Take a brief rest at Dila and follow the way to Finfinnee. At a distance of 30 km from
               Dila a pleasant drive in an evergreen land brings to Abosto a place at which we turned left to
               Guji. Now you completed the wonder ful tour of Guji and Borena."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_whspring:
      - text: "This marvelous hot spring with high discharging and 90b heat is situated in the same district at
@@ -1799,11 +1786,11 @@ responses:
               the foot of Gabela hills the hot water creates rivulet that keeps down powering to Lagadar
               Stream through out the year. Wallame thermal spring if well developed it can be site of thermal
               bathing and multi purpose tourist recreations."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ggorge:
      - text: "The Gibe River which has its source at the highlands of west Shawa flows a long distance to
@@ -1811,11 +1798,11 @@ responses:
               tributaries which brought It to that volume. The grand gorge of Gibe River the vegetation cover
               around it and landscape are what tourists enjor in the onset while traveling to south western
               Oromia."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_jim:
      - text: "Past the Gibe gorge tourist can enjoy spectacular scenery of the land and vegetation cover
@@ -1832,11 +1819,11 @@ responses:
               current site of the Jimma town. Historical palace of Sultan Abba Jifar (1853-1925) and Jimma
               museum antiquities are also among the major historical heritage that make Jimma one of the
               major tourist destinations of Oromia."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ajpalace:
      - text: "Before being incorporated into the central Christian Empire of Ethiopia, Jimma was one and the
@@ -1852,11 +1839,11 @@ responses:
               ethnic groups around Kafa. The first set of collection in this museum is the personal household
               furniture of the king which include beds of Abba Jifar, tables, arm chairs, utensils, religious
               manuscripts and others."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_tfjiabora:
      - text: "Other attractions around Jimma which catch the eyes of tourists are patches of dense tropical
@@ -1869,11 +1856,11 @@ responses:
               The Sigmo, Gabba, and Salem Wangas forests are also shared between Jimma and Ilu Abba
               Bora Zones. The former covers an area of 2000 square.kilometers while the later stretched over
               4000 square. kilometers in which vicinity big rivers like Gabba, Sor, Birbir, and Wangas flow."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_faj_hu:
      - text: "Due to high annual rainfall, Jimma and llu Abbabora zones are rich in river falls and tropical
@@ -1881,11 +1868,11 @@ responses:
               There are a number of water falls in Jimma area among which Saga Water Fall is the most
               magnificent one. The fall of Dangawaj found at 5km dry weather road from Gachi town on the
               Jima Bedele road is also worth mentioning in this regard."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_sowfall:
      - text: "The road from Jimma to Mattu, via Aggaro and Baddalle towns leads through vast and
@@ -1899,11 +1886,11 @@ responses:
               spot to savor the primal atmosphere of Hu Abba Bora Zone and the scenic beauty of the
               waterfall. The intact natural vegetation and wildlife that took shelters in it enhance its attraction
               for sightseeing."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_got:
      - text: "Set in five mountains scenery at about 618 kilometers from Finfinnee (18 kilometers south of
@@ -1915,11 +1902,11 @@ responses:
               Gore takes travelers to the neighboring Gambella National Regional State, and then to
               Dambidollo. Gore has also served as the office of the British Council in the 1905. The office
               building of the council by it self"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_seasterntr:
    - text: "The south eastern Oromian Tourist route stretches all over the zones of Arsi, West Arsi and Bale
@@ -1974,11 +1961,11 @@ responses:
               The highlanders of Arsi and Bale are also well known by their horse riding activities. Here it
               seems important to mention Arsi as a place where distinguished world athletes like Darartu,
               Haile, Kenenisa, Tirunesh, and others emerged."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_maadistrict:
      - text: "There are small museums that could be remarked for their historical and cultural heritage
@@ -1993,21 +1980,21 @@ responses:
               by thousands of pilgrims from all over the country. The mosque of Asa Usman and rock
               inscriptions in Arabic language found around this mosque are some of major sites of Islamic
               culture and literature to visit in Arsi zone."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ammonument:
      - text: "This historical area is found in Arsi zone and it is considered by Oromo a symbol of patriotism
               to remember Oromo braves who fought against the invader and colonial troops of the invader
               Menelik II and lost their hand and breasts in their fighting's for the freedom of the Oromo people."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_amnpark:
      - text: "Arsi Zone is dominated by highland plateau which cover 78% of its 23060 square kilometers
@@ -2025,11 +2012,11 @@ responses:
               Mountain Nyala, Klipspringer and Menilik's Bushbuck. Asela, the capital of Arsi Zone, is 175
               kilometers far from Addis Ababa (all asphalt road). Access from Asalla to the hunting blocks
               however, require four wheel drive cars on dry weather road and/or horseback ridings."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dodolaaf:
      - text: "As one approaches to the town of Dodola, the first sight of Bale Mountain chain comes to view.
@@ -2056,11 +2043,11 @@ responses:
               mountains, gorges, valley and the jagged outcrops (like Sebsibe Washa) with in the mountains.
               On the way one can enjoy also the dramatic view of valleys and plains to the north where even
               Malka Wakana Dam can be seen from distance."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_bmnpark:
      - text: "This is a magnificent high altitude plateau with numerous dramatic volcanic plugs, easonal tiny
@@ -2080,11 +2067,11 @@ responses:
               Dinsho area is the perfect site of viewing Mountain Nyala and Menelik's Bushbuck, etc. Tourists
               can also visit the head quarter and the museum of the park here at Dinsho and get lodge service
               and relevant information about the park."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
   utter_snate:
      - text: "Sanate, nick-named as The Island in the Air, is a high plateau souring up over 4000m on top.
         The second highest peak next to Ras Dajen in Ethiopia, Tullu Dimtu (4377m above sea level), is
@@ -2118,11 +2105,11 @@ responses:
         • The area also contains the entire global population of giant mole rat etc, \n
         • The 20km highway stretching on Sanete makes the park the only motorable place at an \n
         altitude of 4377massive in African giving you a driving experience above the cloud."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_mwalabu:
      - text: "This is the important place in the juncture of Oromo history. This distinct place is located in
@@ -2140,11 +2127,11 @@ responses:
               place with peace where there was no killing, theft and lies telling. Currently Oromia Regional
               Government is undertaking a historical monument project to construct, cultural conference
               centre, museum and other monuments for the memorial of Oromo history."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_sucave:
      - text: "Let,us end our tour in the direction of Goba to Mada Walabu and come back tour from Robe to
@@ -2170,11 +2157,11 @@ responses:
               venerated monuments of religious history that predate the arrival of slam in Bale. The present
               cultural practice of offering prayers and sac .:rifices by the pilgrim twice a year to celebrate
               events of religious ceren lony gives opportunity to experience history and culture."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dshhussein:
      - text: "The Shrine of Sheikh Husein is one of Oromia's major sites of culture tourism. It is situated on
@@ -2208,11 +2195,11 @@ responses:
               and the 15th. In both occasions visitors can arrive at the Dirre in the afternoon of the first day to
               enjoy the evening /the night celebration which is the beginning of the celebration of the second
               peak day."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_wgorge:
      - text: "Carrying from Shashamara to Bale, the road crosses the Wabe River Gorge, which borders the
@@ -2224,11 +2211,11 @@ responses:
               visiting the gorge however, is near Gasara town (60kilometers from Robe). Here a visitor can
               have a magnificent view of the gorge that exhibits many beautiful natural domes and many
               other attractive features."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
 
   utter_easterntr:
@@ -2287,11 +2274,11 @@ responses:
               'The 22 caravans stationed on the edge of the Awash River gorge and the camp sites along the
               gently flowing Awash River where visitors could camp under riverine trees give opportunity to
               see crocodiles in the river and other larger animals that come to drink water."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ammonestry:
      - text: "Asabot Mountain and its Monastery: A 12 km drive from the park gate takes you to th town of
@@ -2307,11 +2294,11 @@ responses:
               deeds of Saint Samuel both in Geez and English versions.
               Viewing the scenic beauty of the mountain, walking (climbing), horse riding and cultural visits
               are the ideal activities for interested groups."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ajkmforest:
      - text: "Jalo-Kunni Mukhtar Forests: Touristically, west and east Hararge zones are famed by their un
@@ -2324,11 +2311,11 @@ responses:
               vegetation and as wildlife habitats and are currently preserved as a sanctuary of mountain
               Nyala.This forest area which covers 9320 hectars, offer visitors opportunities of trekking, nature
               and wild life sightseeing, and forest exploration."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_obultum:
      - text: "This is a site which holds important place in the history of eastern Oromo people. It is a site
@@ -2344,11 +2331,11 @@ responses:
               All the way from Arbarakate village at which you turned right to Bedesa town, the area is
               enjoyable with its dramatic land forum and terrain ranging from deep gorges which grow coffee
               and chat to mountain ranges covered with evergreen vegetation."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_bkshspring:
      - text: "About 30 kilometers in North of Cheleleka town. It is situated at a distance of two kilometer
@@ -2361,11 +2348,11 @@ responses:
               high temperature steam gushing out through narrow outlets from the walls of the rocky
               mountain where by patients take steam bath in the compartments of a low standard room for
               curative effects with rheumatism, cold, asthma and other complications;"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_Chorora:
      - text: "An archeological site 278 km from Finfinne, where Chororapithecus, the 10 million years old
@@ -2375,11 +2362,11 @@ responses:
               Chorora Formation at the southern margin of the Afar rift.Choroora is of course in the southeast
               part of the Rift Valley. The exact location of Chorora, however, is the east section of Anchar
               woreda of West Harerghe zone, on 40 km distance from Gelemso."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_hruins:
      - text: "Around Karayu, Anchar,Guba Koricha,Mieso, Chiro, Kuni, Badessa, Gelemso, Machera, Hawi
@@ -2390,11 +2377,11 @@ responses:
               described precisely in his book, the remnants of the stone built necropolis, store pits, houses
               and mosques of the ancient Harala people are observable in all of theof Hararghe highlands.
               Their mysterious legends reach as far as Karayu in the west and Jijjiga in the east."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dforest:
      - text: "Dindin Forest- A 28 km drive on gravel road from Galamso leads you to one of untouched forest
@@ -2404,11 +2391,11 @@ responses:
               This forest reserve is currently serving as best research centre for biodiversity and ecosystem
               and controlled hunting area in the country. This site is also ideal for camping, trekking
               sightseeing and Photo and wildlife safari."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_commmonument:
      - text: "This monument shows the history of struggle undertook between Minilik and Hararge Oromo
@@ -2424,11 +2411,11 @@ responses:
               that the tourist can understand merely the history of Oromo peoples. This Oromo heroes'
               Memorial Monument contains the big building of Chalanko heroes, Museum where culture &
               history of Oromo peoples are showed, the gravestone of Baker Ware on its horse, and etc."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ddawa:
      - text: "Dire-Dawa: Being one of the busiest business city of the country, Dire Dawa is among the
@@ -2441,11 +2428,11 @@ responses:
               Dire-Dawa is also an ideal site of ethnic variety whereby diversified are easily cultural styles of
               Oromo, Somali, Afar, Harari and others observed Lap. Oda Cave formation with pre historic
               paintings are found at a short distance from Dire-Dawa city."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_besanctuary:
      - text: "Shared between Oromia and Somali Regional State, Babile Elephant Sanctuary covering an area
@@ -2454,11 +2441,11 @@ responses:
               established for the protection of the endemic Lodinta Africana Oreleansi elephant sub species.
               Apart from elephant, this semi arid and wood land sanctuary is also a habitat for a number of
               mammals including black manned lion, Kudu (greater and lesser), wild Ass, and others."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_urfbabbile:
      - text: "These uniquely shaped rocks with admirable features are found in a place called Dakata, 5
@@ -2466,11 +2453,11 @@ responses:
               easily be visited as the road from Harar to 'Funyan' Bira passes through their spectacular
               setting, The Dakata valley which is filled with these unusual volcanic formations can be a good
               attraction for sightseers, nature lovers and adventurers."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_mkundudo:
      - text: "Located in Gursum District few kilometers away from 'Funyan Bira' town, there is a mountain
@@ -2481,11 +2468,11 @@ responses:
               unique wealth resident Lammergeyer, birds of prey and other bird species, mongooses and
               monkeys are found in this forest. So this area is one of the significant attraction areas of the
               zone."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dcave:
      - text: "This incredible underground village like structure shaped cave is found in Eastern Hararge,
@@ -2496,11 +2483,11 @@ responses:
               'the Gursum Pearl' while many small inter connected caves in the area, landscapes and wild
               horses make the area chose able for research and destination as well as for Archeologists and
               paleoanthropologists."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_hmosques:
      - text: "Due to its relative proximity to the Middle East the eastern part of Ethiopia and Oromia is a place
@@ -2513,11 +2500,11 @@ responses:
               from Kersa and Fedhis towns in a way reflecting their glorious past. These sites have important
               place for those interested in the research of the History of Islamic civilization. These sites of
               course do need detailed study and activities to collect, organize and preserve manuscripts."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_ocave:
      - text: "Dima natural cave is found in Eastern Hararge, Badano district at a distance of about 646km
@@ -2528,11 +2515,11 @@ responses:
               during the past decades.
               Different colored melting rock segments of stalactite and stalagmite which are hanged on the
               roof of Dima cave make it selected for further research and destination."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_westerntr:
    - text: "The west Oromian tourist route starts from the town of Guder and goes as far west as
@@ -2567,11 +2554,11 @@ responses:
               western route, From the Oromian western tourist route one can travel either to Benishangul
               Gumuz national Regional State or to Gambela N.R.S. and back to South western route of
               Oromia."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_wclstyle:
      - text: "The land beyond west Shawa to the west up to the border of Oromia was formerly called
@@ -2584,32 +2571,32 @@ responses:
               The Oromo of west Oromia are well known by their tradition of songs called gerarsa by which
               they encourage and praise heroes. A type of song called lyase is popular in the area by which
               people sing and dance in large group"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_obgsite:
      - text: "One of the major Oromo Gada sites(Oda Buluk) is found in Horo Guduru Wollaga zone. Oda
               Buluk is located at a distance of 17 km from zonal capital shambu.lt serves as Gada center and
               center of Irecha.The irecha ceremony takes place here every year towards the end of september"
-                    #  buttons:
-                    #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_fdam:
      - text: "Apart from its basic purposes of serving as source of hydro electric power and sugar cane
               plantation, the artificial lake Fincha'a also constitutes avariety of elements depicting tourism
               potential. Such tourism potential involve harboring aquatic life scenery, and other features of
               leisure and recreations"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_bawfall:
      - text: "The dusty dry weather road starts from Nekemte to reach at Angar state farm where attractive
@@ -2627,11 +2614,11 @@ responses:
               Didessa valley is an area of numerous watershed that more than 14 small rivers and streams
               flow to the major one (Didessa). The area is believed to be a habitat for about 54 plant species,
               30 mammal species and number of birds,"
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_dhwpark:
      - text: "Dhati controlled Hunting Area is found in Kelem Wollega zone of Gawo Kebe Woreda in Aroji
@@ -2646,21 +2633,21 @@ responses:
               having the name Gara Arba Means Elephants Hill. Absence of developed infrastructure and tourist 
               facilities are observed in this area. In respect of
               this it is very fascinating and wonderful natural attraction of the region."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_kwfall:
      - text: "On the way to Dembidolo, is located Kexo water fall. Having 20 meters width, the water
               powerfully foams dawn from a basalt stone of about 15m height. The picturesquareue feature
               of the water fall would appeal to lovers of natural beauty."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_wshcagjforest:
      - text: "The capital of west Wollagga zone, Gimbi town, is only 110 kilometers west of Nekemte. Just
@@ -2674,11 +2661,11 @@ responses:
               Garjeda forest is worth remarked for its significant wildlife like lion, buffalo, wild pigs, antelope
               species,Colobus monkeys, with indeed the unique landscape and mountain peaks of Tullu Walal
               (3335mas) that offer significant scenery."
-      #  buttons:
-      #  - title: "In picture"
-      #    payload: "/wimage"
-      #  - title: "In video"
-      #    payload: "/wvideo"
+       buttons:
+       - title: "In picture"
+         payload: "/wimage"
+       - title: "In video"
+         payload: "/wvideo"
 
   utter_goodbye:
    - text: "Good bye. Thank you for asking me."
