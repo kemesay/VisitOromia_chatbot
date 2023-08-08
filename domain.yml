@@ -1,6 +1,7 @@
 version: "3.1"
 
 intents:
+  - nlu_fallback
   - greet
   - otc
   - aboutotc
@@ -62,7 +63,7 @@ intents:
   #- agronomy
   - bwatching
   # - history
-  - menu
+  - start
   - central_culture_life_style
   - two_culture_life_style
   - finfinne_adama_tourist_line
@@ -140,7 +141,7 @@ intents:
   - wabe_gorge
   
   - eastern_tourist_route
-  - asabo_mountains_monestry
+  - asabo_mountains_monestry 
   - jalo_kunni_mukhtar_forest
   - oda_bultum
   - burka_kobtu_sama_hot_spring
@@ -359,10 +360,6 @@ responses:
         payload: "/telegramg"
       - title: "Twitter"
         payload: "/twitter"
-      - title: "Youtube"
-        payload: "/youtube"
-      - title: "Instagram"
-        payload: "/instagram"
       - title: "Youtube"
         payload: "/youtube"
       - title: "Instagram"
@@ -2799,6 +2796,7 @@ actions:
 - walal_shabalaction_exercise
 - gallery_videos_action_exercise
 - gallery_images_action_exercise
+- action_default_fallback
 
 
 # - action_handoff

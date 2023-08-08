@@ -18,14 +18,6 @@ nlu:
     - good evening
     - good afternoon
 
-- intent: menu
-  examples: |
-   - what are the menu of visit oromia chat bot
-   - can you help me with visit oromia chat bot menu
-   - how can  i get visit oromia chat bot menu
-   - i want to know the menu of visit oromia chat bot
-   - let direct me to visit oromia chat bot menu
-
 - intent: otc
   examples: |
    - where is oromia tourism commission
@@ -136,6 +128,17 @@ nlu:
    - visit oromia video
    - help me with video
    - help me with videos
+
+
+- intent: start
+  examples: |
+   - /start
+   - menu
+   - go to menu of visit oromia
+   - select  menu of visit oromia
+   - touch menu of visit oromia
+   - help me with menu of visit oromia
+ 
 
 
 # - intent: tour_opertaor
@@ -582,13 +585,7 @@ nlu:
 
 
 ###################################################################################################
-- intent: menu
-  examples: |
-   - menu
-   - go to menu of visit oromia
-   - select  menu of visit oromia
-   - touch menu of visit oromia
-   - help me with menu of visit oromia
+
 
 # - intent: flight
 #   examples: |
@@ -1552,6 +1549,13 @@ nlu:
     - who are you?
     - ati eenyu?
     - eenyu jedhu ?
+
+- intent: nlu_fallback
+  examples: |
+    - I'm not sure what you mean
+    - Can you repeat that?
+    - Sorry, I didn't understand
+    - I don't know what to say
 
 ###########################################################################################
 

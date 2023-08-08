@@ -1155,9 +1155,8 @@ class Actionwalal_shabal(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         dispatcher.utter_message("wait... Loading images and Video")
-        dispatcher.utter_message(attachment="https://youtu.be/kBRkY5EUzZw")
-   
-        dispatcher.utter_message(attachment= "https://youtu.be/GB-UhaijKO4")        
+        dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
+        dispatcher.utter_message(text="https://youtu.be/GB-UhaijKO4")        
   
         return []
     
@@ -1220,19 +1219,19 @@ class Actiongalleryvideos(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         dispatcher.utter_message("wait... Loading Video")
-        dispatcher.utter_message(attachment="https://youtu.be/kBRkY5EUzZw")
-        dispatcher.utter_message(attachment="https://youtu.be/GB-UhaijKO4")
-        dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=wvQES92POPQ")
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=HtGAJyMfago")     
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=jsavm7HvGwc") 
-        dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=wvQES92POPQ")
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=-3Ro7Y0ORFU")            
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=dkSxsSwCeRA")
-        dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=mDBT7WTZemk")
-        dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=TSKIfUaohZE")
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=Bu8OF-Sc8Cg") 
-        dispatcher.utter_message(attachment="https://www.youtube.com/watch?v=wQS9cJjDfYU")
-        dispatcher.utter_message(attachment= "https://www.youtube.com/watch?v=IIHMlklIysc") 
+        dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
+        dispatcher.utter_message(text="https://youtu.be/GB-UhaijKO4")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wvQES92POPQ")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=HtGAJyMfago")     
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=jsavm7HvGwc") 
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wvQES92POPQ")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=-3Ro7Y0ORFU")            
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=dkSxsSwCeRA")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=mDBT7WTZemk")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=TSKIfUaohZE")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=Bu8OF-Sc8Cg") 
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wQS9cJjDfYU")
+        dispatcher.utter_message(text="https://www.youtube.com/watch?v=IIHMlklIysc") 
         
         return []
     
@@ -1500,3 +1499,11 @@ class Actiongalleryvideos(Action):
 
 #         ))
 #         return []
+
+class ActionFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text="I'm sorry, I didn't understand that. Can you please rephrase? or provide more information")
+        return []

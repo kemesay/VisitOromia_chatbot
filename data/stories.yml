@@ -6,7 +6,8 @@ stories:
   - intent: greet
   - action: utter_greet
   # - action: action_service
-  - intent: menu
+  # - intent: menu
+  - intent: start
   - action: utter_Menu
  
 - story: otc_corpoations
@@ -585,7 +586,7 @@ stories:
 #   steps: 
 #   - intent: wenchi_in_detail 
 #   - slot_was_set:
-#     - wenchi_in_detail: wenchi_in_detail
+#   - wenchi_in_detail: wenchi_in_detail
 #   - action: utter_wenchi_in_detail
   
 # - story: wimage path 
