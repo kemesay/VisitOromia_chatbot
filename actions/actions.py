@@ -1219,6 +1219,16 @@ class Actiongalleryvideos(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         dispatcher.utter_message("wait... Loading Video")
+        
+        
+        video_thumbnail = "http://otc.visitoromia.org/uploads/svg/one.png"
+        video_url = "https://youtu.be/kBRkY5EUzZw"
+        
+        message = f"[![Video Thumbnail]({video_thumbnail})]({video_url})"
+        dispatcher.utter_message(text=message)
+        
+        
+        
         dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
         dispatcher.utter_message(text="https://youtu.be/GB-UhaijKO4")
         dispatcher.utter_message(text="https://www.youtube.com/watch?v=wvQES92POPQ")

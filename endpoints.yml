@@ -13,8 +13,8 @@
 # action_endpoint:
 #   url: "http://localhost:5005/webhook"
 action_endpoint:
-#  url: "http://localhost:5055/webhook"
-  url: "https://52.212.99.214:5055/webhook"
+ url: "http://localhost:5055/webhook"
+  # url: "https://52.212.99.214:5055/webhook"
 
 # action_endpoint:
 #  url: "http://3.129.70.211:8000/webhook"
