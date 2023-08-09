@@ -1221,12 +1221,14 @@ class Actiongalleryvideos(Action):
         dispatcher.utter_message("wait... Loading Video")
         
         
+        
+        
+        
         video_thumbnail = "http://otc.visitoromia.org/uploads/svg/one.png"
         video_url = "https://youtu.be/kBRkY5EUzZw"
         
         message = f"[![Video Thumbnail]({video_thumbnail})]({video_url})"
         dispatcher.utter_message(text=message)
-        
         
         
         dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
