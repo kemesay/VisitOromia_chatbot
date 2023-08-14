@@ -278,23 +278,26 @@ responses:
       #image: "https://www.google.com/imgres?imgurl=https%3A%2F%2Foromiatourismcommission.et%2Fwp-content%2Fuploads%2F2022%2F03%2FLogo.png&imgrefurl=https%3A%2F%2Foromiatourismcommission.et%2F&tbnid=buJReT3rJPMngM&vet=12ahUKEwiFxICcm-v3AhVBxhoKHRZEBkIQMygAegUIARCDAQ..i&docid=p_ptrAeVizpH-M&w=7581&h=3920&q=oromiatourismcommission.et&ved=2ahUKEwiFxICcm-v3AhVBxhoKHRZEBkIQMygAegUIARCDAQ"
 
   utter_Menu:
-  - buttons:
-    - payload: /otc
-      title: OTC (Oromia Commission Tourism)
-    - payload: /visitoromia
-      title: Visit Oromia
-    - payload: /covid
-      title: Covid_19 Information 
-    - payload: /live_chat
-      title: Connect With Agent
+    - text: I can help you with the following, when you visit oromia 
+      buttons:
+      
+      - title: OTC (Oromia Commission Tourism)
+        payload: /otc
+      - title: Visit Oromia 
+        payload: /visitoromia
+      
+      - title: Covid_19 Information 
+        payload: /covid
+     
+      - title: Connect With Agent 
+        payload: /live_chat
     # - payload: /request_form
     #   title: Feedback 
     #- payload: /Language_setting   
       #title: Change Language
-    - payload: /gallery
-      title: Gallery
-    button_type: vertical
-    text: I can help you with the following, when you visit oromia 
+      - title: Gallery
+        payload: /gallery
+      button_type: vertical
         
   utter_ot:
     - text: "Oromia Tourism Commission (OTC) is a public organization entrusted with the duty and 
@@ -824,12 +827,22 @@ responses:
         payload: "/image_gallery"
       - title: "Videos"
         payload: "/video_gallery"
+      button_type: "horizontal"
 
-  utter_gallery_pictures:
-   - text: "This is multiple pictures of visit oromia"
 
-  utter_gallery_videos:
-   - text: "This is multiple videos of visit oromia"    
+
+
+
+
+  # utter_gallery_pictures:
+  #   # - custom:
+  #   #     action_name: Actiongalleryimage
+  #    - images: []
+
+  # utter_gallery_videos:
+  # #  - custom: 
+  # #      action_name: Actiongalleryvideos   
+  #    - videos: []
 ##################################################################################
   utter_centralcomponents:
     - text: "The central Oromia tourist route is an area covering an average distance of
@@ -2794,8 +2807,8 @@ actions:
 - dhati_walal_parkaction_exercise
 - keto_water_fallaction_exercise
 - walal_shabalaction_exercise
-- gallery_videos_action_exercise
-- gallery_images_action_exercise
+- gallery_videos
+- gallery_pictures
 - action_default_fallback
 
 

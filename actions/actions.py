@@ -8,6 +8,7 @@ from ast import Import
 from typing import Any, Text, Dict, List, Union
 # from rasa_core.agent import Agent
 from rasa_sdk import Action, Tracker
+import time
 # from rasa import Action
 # from telegram import MenuButton, InlineKeyboardButton, update, KeyboardButton, replymarkup
 # from telegram.ext import(callbackcontext, Filters   ,Updater, CommandHandler, callbackqueryhandler, CallbackContext)
@@ -1163,92 +1164,104 @@ class Actionwalal_shabal(Action):
 class Actiongalleryimage(Action):
          
     def name(self) -> Text:
-        return "gallery_images_action_exercise"
+        return "gallery_pictures"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
-        dispatcher.utter_message("wait... Loading images")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Lake_Hora_Harsade.jpg") 
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/2_fLUMPXw.png") 
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Lake_Kilole.jpg") 
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/svg/one.png")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Mountain_Yarar.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/4_9pkdryi.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Lake_Babogaya.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/oromo_cultural_center.jpg") 
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/lake_bishoftu_Dream_Land_Resort.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/lake_dembel.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Lake_Langano_Resort_Area.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/photo_2022-03-10_16-34-33_Xp8TkQf.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Lake_Magarisa.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Mountain_Chuqala_Ziquala.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/22.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/28_MSmJHAl.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/34.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/27.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/26_u4kJaI5.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/26_u4kJaI5.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/culture/32.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Cafe_Tuma.jpg") 
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Oda_Nabe_ji8BqOX.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Other_Attractions_in_Bishoftu_Town.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/route_image/Bishoftu.jpg") 
-        
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/cropWabe-Shebelle-1-2000x1024.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-40-26.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/pjimage_2_OlJ1Cq5.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-43-54.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-43-13.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-58-26.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_02-00-12.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/cropWabe-Shebelle-1-2000x1024.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-45-16.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-54-33.jpg")
-        dispatcher.utter_message(image="http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-55-05.jpg")
-        dispatcher.utter_message(image="https://otc.visitoromia.org/uploads/activity/Pilgrimage_GabubCr.jpg")
-        
+        image_urls = [
+            "http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png",
+            # "https://otc.visitoromia.org/uploads/route_text/Lake_Hora_Harsade.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/Mountain_Yarar.jpg",
+            "https://otc.visitoromia.org/uploads/culture/2_fLUMPXw.png", 
+            "https://otc.visitoromia.org/uploads/route_image/Lake_Kilole.jpg", 
+            "http://otc.visitoromia.org/uploads/svg/one.png", 
+            "https://otc.visitoromia.org/uploads/culture/4_9pkdryi.jpg", 
+            "https://otc.visitoromia.org/uploads/route_image/Lake_Babogaya.jpg", 
+            "https://otc.visitoromia.org/uploads/route_image/oromo_cultural_center.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/lake_bishoftu_Dream_Land_Resort.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/lake_dembel.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/Lake_Langano_Resort_Area.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/photo_2022-03-10_16-34-33_Xp8TkQf.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/Lake_Magarisa.jpg", 
+            "https://otc.visitoromia.org/uploads/route_image/Mountain_Chuqala_Ziquala.jpg",
+            "https://otc.visitoromia.org/uploads/culture/22.jpg",
+            "https://otc.visitoromia.org/uploads/culture/28_MSmJHAl.jpg",
+            "https://otc.visitoromia.org/uploads/culture/34.jpg",
+            "https://otc.visitoromia.org/uploads/culture/27.jpg",
+            "https://otc.visitoromia.org/uploads/culture/26_u4kJaI5.jpg", 
+            "https://otc.visitoromia.org/uploads/culture/32.jpg", 
+            "https://otc.visitoromia.org/uploads/route_image/Cafe_Tuma.jpg", 
+            "https://otc.visitoromia.org/uploads/route_image/Oda_Nabe_ji8BqOX.jpg",
+            "http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png",
+            "https://otc.visitoromia.org/uploads/route_image/Other_Attractions_in_Bishoftu_Town.jpg",
+            "https://otc.visitoromia.org/uploads/route_image/Bishoftu.jpg" ,
+            "http://otc.visitoromia.org/uploads/uploads/cropWabe-Shebelle-1-2000x1024.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-40-26.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/pjimage_2_OlJ1Cq5.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-43-54.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-43-13.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-58-26.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_02-00-12.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/cropWabe-Shebelle-1-2000x1024.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-45-16.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-54-33.jpg",
+            "http://otc.visitoromia.org/uploads/uploads/photo_2022-03-20_01-55-05.jpg",
+            "https://otc.visitoromia.org/uploads/activity/Pilgrimage_GabubCr.jpg"    
+        ]
+        for image_url in image_urls:
+            dispatcher.utter_message(image=image_url)
         return []
+     
+
+        
+        # return []
     
 class Actiongalleryvideos(Action):
          
     def name(self) -> Text:
-        return "gallery_videos_action_exercise"
+        return "gallery_videos"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
-        dispatcher.utter_message("wait... Loading Video")
-        
-        
-        
-        
-        
-        video_thumbnail = "http://otc.visitoromia.org/uploads/svg/one.png"
-        video_url = "https://youtu.be/kBRkY5EUzZw"
-        
-        message = f"[![Video Thumbnail]({video_thumbnail})]({video_url})"
-        dispatcher.utter_message(text=message)
-        
-        
-        dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
-        dispatcher.utter_message(text="https://youtu.be/GB-UhaijKO4")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wvQES92POPQ")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=HtGAJyMfago")     
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=jsavm7HvGwc") 
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wvQES92POPQ")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=-3Ro7Y0ORFU")            
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=dkSxsSwCeRA")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=mDBT7WTZemk")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=TSKIfUaohZE")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=Bu8OF-Sc8Cg") 
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=wQS9cJjDfYU")
-        dispatcher.utter_message(text="https://www.youtube.com/watch?v=IIHMlklIysc") 
-        
-        return []
-    
+        # dispatcher.utter_message("wait... Loading Video")
+        videos = [
+                    {"title": "Video 1", "src": "https://youtu.be/kBRkY5EUzZw"},
+                    {"title": "Video 2", "src": "https://youtu.be/GB-UhaijKO4g"},
+                    {"title": "Video 3", "src": "https://www.youtube.com/watch?v=wvQES92POPQg"},
+                    {"title": "Video 4", "src": "https://youtu.be/kBRkY5EUzZw"},
+                    {"title": "Video 5", "src": "https://youtu.be/GB-UhaijKO4"},
+                    {"title": "Video 6", "src": "https://www.youtube.com/watch?v=wvQES92POPQ"},
+                    {"title": "Video 7", "src": "https://www.youtube.com/watch?v=HtGAJyMfago"},    
+                    {"title": "Video 8", "src": "https://www.youtube.com/watch?v=jsavm7HvGwc"}, 
+                    {"title": "Video 9", "src": "https://www.youtube.com/watch?v=wvQES92POPQ"},
+                    {"title": "Video 10", "src": "https://www.youtube.com/watch?v=-3Ro7Y0ORFU"},            
+                    {"title": "Video 11", "src": "https://www.youtube.com/watch?v=dkSxsSwCeRA"},
+                    {"title": "Video 12", "src": "https://www.youtube.com/watch?v=mDBT7WTZemk"},
+                    {"title": "Video 13", "src": "https://www.youtube.com/watch?v=TSKIfUaohZE"},
+                    {"title": "Video 14", "src": "https://www.youtube.com/watch?v=Bu8OF-Sc8Cg"} ,
+                    {"title": "Video 15", "src": "https://www.youtube.com/watch?v=wQS9cJjDfYU"},
+                    {"title": "Video 16", "src": "https://www.youtube.com/watch?v=IIHMlklIysc"} 
+                   ]
 
-   
+        for video in videos:
+            msg = {
+                "type": "video",
+                "payload": {
+                    "title": video["title"],
+                    "src": video["src"]
+                }
+            }
+            # time.sleep(5)
+
+            dispatcher.utter_message(text="Check this video", attachment=msg)
+
+        return []
+        
+        
+        
+
+        
+        # return []
 # class ActionDetectLanguage(Action):
 
 #     def get_lang(tracker):
