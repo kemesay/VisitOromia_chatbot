@@ -68,24 +68,17 @@ from rasa_sdk.forms import FormValidationAction
 #                         return []
                     
 
-# class ActionFormInfo(FormValidationAction): 
-#         def name(self) -> Text:  
-#                  return "form_info"
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from typing import Text, List, Dict, Any
 
-#         @staticmethod 
-#         def required_slots(tracker: Tracker) -> List[Text]: 
-#                          return ["firstN", "lastN","feedback"] 
-#         def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]: 
-#                           return {"firstN": [ self.from_entity( entity="firstN",    
-#                                               intent="FirstName"), ], 
-#                                               "lastN": [self.from_text()], 
-#                                               "feedback": [self.from_text()], }
-#         def submit( self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any], ) -> List[Dict]:    
-#                              dispatcher.utter_message(utter_message="utter_submit",   
-#                                              Fname=tracker.get_slot("firstN"), 
-#                                              Lname=tracker.get_slot("lastN"), 
-#                                              Feedback=tracker.get_slot("feedback")) 
-#                              return [] 
+class ActionSubmitFeedback(Action):
+    def name(self) -> Text:
+        return "action_submit_feedback"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        return []
+
                          
 # class Actionmenu(Action):
      
@@ -171,7 +164,7 @@ class Actionlakeharsade(Action):
   
         return []
 
-class Actionlakebishoftu(Action):
+class Actionlakebishoftu(Action): 
          
     def name(self) -> Text:
         return " lakebishoftuaction_exercise"
@@ -1130,7 +1123,6 @@ class Actiondhati_walal_park(Action):
          
     def name(self) -> Text:
         return "dhati_walal_parkaction_exercise"
-
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         dispatcher.utter_message("wait... Loading images and Video")
         dispatcher.utter_message(attachment="https://youtu.be/kBRkY5EUzZw")
@@ -1149,16 +1141,13 @@ class Actionketo_water_fall(Action):
   
         return []
     
-class Actionwalal_shabal(Action):
-         
+class Actionwalal_shabal(Action): 
     def name(self) -> Text:
         return "walal_shabalaction_exercise"
-
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         dispatcher.utter_message("wait... Loading images and Video")
         dispatcher.utter_message(text="https://youtu.be/kBRkY5EUzZw")
         dispatcher.utter_message(text="https://youtu.be/GB-UhaijKO4")        
-  
         return []
     
 class Actiongalleryimage(Action):
@@ -1178,7 +1167,7 @@ class Actiongalleryimage(Action):
             "https://otc.visitoromia.org/uploads/route_image/Lake_Babogaya.jpg", 
             "https://otc.visitoromia.org/uploads/route_image/oromo_cultural_center.jpg",
             "https://otc.visitoromia.org/uploads/route_image/lake_bishoftu_Dream_Land_Resort.jpg",
-            "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
+            # "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
             "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
             "https://otc.visitoromia.org/uploads/route_image/lake_dembel.jpg",
             "https://otc.visitoromia.org/uploads/route_image/Lake_Langano_Resort_Area.jpg",
@@ -1513,17 +1502,19 @@ class Actiongalleryvideos(Action):
 #         }
 
 #     def submit(
-#         self,
-#         dispatcher: "CollectingDispatcher",
-#         tracker: "Tracker",
-#         domain: Dict[Text, Any],
-#     ) -> List[EventType]:
+#         self, dispatcher: "CollectingDispatcher", tracker: "Tracker", domain: Dict[Text, Any],) -> List[EventType]:
 
 #         dispatcher.utter_message("Here are the information that you provided. Do you want to save it?\nName: {0},\nMobile Number: {1},\nEmail: {2},\nOccupation: {3}".format(
 #             tracker.get_slot("name"), tracker.get_slot("number"), tracker.get_slot("email"), tracker.get_slot("occupation"),
 
 #         ))
 #         return []
+
+
+######################################################################################################
+######################################################################################################
+
+
 
 class ActionFallback(Action):
     def name(self) -> Text:

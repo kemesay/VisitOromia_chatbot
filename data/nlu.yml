@@ -29,14 +29,17 @@ nlu:
    - i want to know oromia tour commission
    - oromia commission
    - locate me to oromia commission tourism
+   - can you help me with otc
+   - OTC
+   - where is otc
 
-- intent: aboutotc
-  examples: | 
-   - Oromia Tourism ommission
-   - what is the purpose of oromia tourism commission
-   - what is the mission of oromia commission tourism
-   - what is the vision of oromia commission tourism
-   - about oromia tourism commission 
+# - intent: aboutotc
+#   examples: | 
+#    - Oromia Tourism ommission
+#    - what is the purpose of oromia tourism commission
+#    - what is the mission of oromia commission tourism
+#    - what is the vision of oromia commission tourism
+#    - about oromia tourism commission 
 
 - intent: missionandvision
   examples: | 
@@ -47,6 +50,8 @@ nlu:
    - mission and vision
    - mission
    - vision  
+   - OTC mission and vision
+
 - intent: investment_otc
   examples: | 
    - investment
@@ -55,6 +60,7 @@ nlu:
    - investment in oromia
    - what is the vision of oromia tourism commission
    - about investment
+   - OTC investment
 
 - intent: otccareer
   examples: | 
@@ -64,6 +70,7 @@ nlu:
    - tell me about career of oromia tourism commission 
    - can you help me with carer of oromia tourism commission
    - careers of oromia tourism commission
+   - OTC career
 
 - intent: clot_sourvenir_shops
   examples: | 
@@ -85,6 +92,8 @@ nlu:
    - how can I get oromia tourism commission contact
    - direct me to oromia tourism commission contact
    - oromia tourism commission contact
+   - OTC contacts
+   - visit oromia contacts
 
 - intent: live_chat
   examples: |
@@ -95,6 +104,11 @@ nlu:
    - how can I get live chat
    - direct me to 
    - Agent
+   - coneect with agent
+   - OTC Agent
+   - OTC live chat
+   - visit oromia agent
+   - visit oromia live chat
 
 #############################################################################################################
 - intent: visitoromia
@@ -103,14 +117,14 @@ nlu:
    - what is visit oromia 
    - purposes of visit oromia 
    - why visit oromia is funded as brand of oromia tourism commission
-   - visit oromia
+   - Visit Oromia
    - help me with visit oromia
    - Ethiopia
    - oromia
    - Addis ababa
    - adis ababa
    - adis abeba
-   - visit oromia 
+
 
 - intent: gallery
   examples: |
@@ -121,9 +135,9 @@ nlu:
    - what are the videos of visit oromia
    - photos and image
    - images and video
-   - oromia visit
    - help me with video and photo
    - help me with videos and image
+   - visit oromia gallery
 
 
 - intent: image_gallery
@@ -133,7 +147,10 @@ nlu:
    - pictures
    - images
    - image
-   - pictires of visit oromia
+   - visit oromia image
+   - visit oromia photo
+   - visit oromia picture
+   - pictures of visit oromia
    - help me with photo
    - help me with image
 
@@ -144,6 +161,7 @@ nlu:
    - visit oromia video
    - video
    - vidoe
+   - visit oromia video
    - videos
    - help me with video
    - help me with videos
@@ -151,17 +169,38 @@ nlu:
 
 - intent: start
   examples: |
-   - /start
    - menu
    - start
+   - /start
    - go to menu of visit oromia
    - select  menu of visit oromia
    - touch menu of visit oromia
    - help me with menu of visit oromia
    - help me with menu
    - menu of visit oromia
- 
 
+# - intent: feedback
+#   examples: |
+#    - feedback
+#    - my feedback
+#    - I want to give feedback
+#    - give feedback
+#    - how to give feedback
+#    - how to feedback
+#    - I want to provide feedback
+#    - Can I leave feedback?
+#    - Feedback about the service
+   
+- intent: help
+  examples: |
+   - help
+   - help me
+   - I want you to help me
+   - please help me
+   - I need help
+   - how to help me
+   - can you help me
+   - I need help about visit oromia
 
 # - intent: tour_opertaor
 #   examples: | 
@@ -217,6 +256,7 @@ nlu:
    - midea
    - links
    - media
+   - visit oromia social midea
 
 - intent: website
   examples: |
@@ -238,6 +278,7 @@ nlu:
    - what is linkedin of visit oromia
    - help me with linkedinof visit oromia
    - linkedin of visit oromia
+   - visit oromia linkedin
 
 - intent: facebook
   examples: |
@@ -245,6 +286,7 @@ nlu:
    - what is facebook of visit oromia
    - help me with facebook of visit oromia
    - facebook of visit oromia
+   - visit oromia facebook
 
 - intent: telegramg
   examples: |
@@ -257,6 +299,7 @@ nlu:
    - telegram group
    - group
    - groups
+   - visit oromia telegram group
 
 - intent: twitter
   examples: |
@@ -267,6 +310,7 @@ nlu:
    - twitter
    - twitters
    - twit
+   - visit oromia twitter
 
 - intent: youtube
   examples: |
@@ -275,8 +319,9 @@ nlu:
    - help me with youtube of visit oromia
    - youtube of visit oromia
    - youtube
-   - youtub
+   - youtube channel
    - youtubes
+   - visit oromia youtube
 
 - intent: instagram
   examples: |
@@ -287,6 +332,7 @@ nlu:
    - visit oromia instagram
    - instagram
    - instagrams
+   - visit oromia instagram
 
 - intent: Pinterest
   examples: |
@@ -298,6 +344,7 @@ nlu:
    - visit oromia Pinterest
    - oromia Pinterest
    - Pinterests
+   - visit oromia pinterest
 
 
 - intent: categories
@@ -309,6 +356,8 @@ nlu:
    - list categories of destinations
    - group of destinations
    - categoried of dedstinations
+   - visit oromia category
+   - visit oromia categories
 #####################################################################################
 #
 #                        National Parks
@@ -327,6 +376,7 @@ nlu:
    - what are national parks of visit oromia
    - help me with national park of visit oromia
    - national park of visit oromia
+   - visit oromia national park
 #####################################################################################
 #
 #                        Birds
@@ -346,6 +396,7 @@ nlu:
    - what are birds of visit oromia
    - help me with birds of visit oromia
    - birds of visit oromia
+   - visit oromia birds
 
 #####################################################################################
 #
@@ -363,6 +414,7 @@ nlu:
    - what are Wild Animals of visit oromia
    - help me with Wild Animals of visit oromia
    - Wild Animals of visit oromia
+   - visit oromia wild animal
 
 #####################################################################################
 #
@@ -379,6 +431,7 @@ nlu:
    - what are landscapes of visit oromia
    - help me with landscapes of visit oromia
    - landscapes of visit oromia
+  
 #####################################################################################
 #
 #                        Museum and Monument
@@ -412,6 +465,7 @@ nlu:
    - what are palaces of visit oromia
    - help me with palaces of visit oromia
    - palaces of visit oromia
+   - visit oromia palace
 #####################################################################################
 #
 #                        Water Bodies
@@ -427,6 +481,7 @@ nlu:
    - visit oromia water body
    - visit water
    - water bodies
+   - Visit water body
    - water bodies under visit oromia
    - what are water bodies of visit oromia
    - help me with water bodies of visit oromia
@@ -462,6 +517,7 @@ nlu:
    - list the activities taken when visit oromia
    - activities taken under different destinations
    - help me with activities
+   - visit activities
 #####################################################################################
 #
 #                        Hiking
@@ -474,6 +530,7 @@ nlu:
    - visit oromia hikings
    - oromia hikings
    - oromia hiking
+   - visit hiking
    - hiking under visit oromia
    - what are hiking of visit oromia
    - help me with hiking of visit oromia
@@ -523,6 +580,7 @@ nlu:
    - oromia treks
    - visit oromia treks
    - trekk
+   - visit trekking
    - Trekking under visit oromia
    - what are destinations having terkking of visit oromia
    - help me with Trekking of visit oromia
@@ -580,7 +638,7 @@ nlu:
    - oromia southern tourism
    - visit oromia southern tourism route
    - visit southern tourism route
-   - visit south
+   - visit south oromia
 
 - intent: southwestTR
   examples: | 
@@ -588,6 +646,8 @@ nlu:
    - help me with south west tourism route
    - what are south west tourism routes
    - how can i get south west tourism route
+   - visit oromia south west tourism route
+   - visit oromia south west
 
 - intent: southeastTR
   examples: | 
@@ -595,6 +655,8 @@ nlu:
    - help me with south east tourism route
    - what are south east tourism routes
    - how can i get south east tourism route
+   - visit oromia south east tourism route
+   - visit south east oromia
 
 - intent: easternTR
   examples: | 
@@ -602,6 +664,8 @@ nlu:
    - help me with eastern tourism route
    - what are eastern tourism routes
    - how can i get eastern tourism route
+   - visit oromia eastern
+   - visit eastern oromia
 
 - intent: westernTR
   examples: | 
@@ -609,8 +673,8 @@ nlu:
    - help me with western tourism route
    - what are western tourism routes
    - how can i get western tourism route
-
-
+   - visit oromia western
+   - visit western oromia
 
 #######################################################################################################
 #                                                                                                     #
@@ -630,13 +694,13 @@ nlu:
    - list criteria of care covid_19 information in ethiopia
 
 #######################################################################################################
-# #  language setting 
-# - intent: Language_setting
-#   examples: | 
-#    - I want to change language
-#    - how to change language
-#    - tell me  how to change language
-#    - this bot support different language
+#  language setting 
+- intent: Language_setting
+  examples: | 
+   - I want to change language
+   - how to change language
+   - tell me  how to change language
+   - this bot support different language
 
 # - intent: English
 #   examples: | 
