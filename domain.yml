@@ -2743,7 +2743,7 @@ responses:
    - text: "Good bye. Thank you for asking me."
 
   utter_iamabot:
-   - text: "I am Oromia tourism commission ChatBot powered by OTC to guide tours, 
+   - text: "I am Visit Oromia Chat Bot, powered by OTC to guide tours and  
            I can give you all the information you need to visit Oromia."
   # utter_pictures:
   #  - text:  Here is the [picture link](https://drive.google.com/drive/folders/1FhALBsD4pyVlhGETxHVHwMuZQXckVyKB) I have invite you for recreation

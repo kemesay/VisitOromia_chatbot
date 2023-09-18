@@ -6,6 +6,14 @@ import asyncio
 import logging
 import requests
 import time
+import json
+import threading
+
+
+running_thread = None
+
+exit_event = threading.Event()
+
 
 FIRST_NAME, LAST_NAME, EMAIL, FEEDBACK = range(4)
 
@@ -183,9 +191,7 @@ def message_overtaken(update: Update, context: CallbackContext):
     dict_user[users.id] = count
     print("text from overtaken message", update.message.text )
     if update.message.text == 'Feedback':
-        print("count from  collect fee", count)
         dict_user[users.id] = count+1
-        print("count from  collect", count)
         context.bot.send_message(chat_id=update.effective_user.id, text="Great! Please enter your first name.!")
         return FIRST_NAME
 
@@ -244,7 +250,7 @@ def send_feedback_to_api(feedback):
     headers = {'Content-Type': 'application/json'}
     response = requests.post(api_url, json=feedback, headers=headers)
 
-def cancel(update: Update, context: CallbackContext):
+def cancelf(update: Update, context: CallbackContext):
     update.message.reply_text("Feedback submission canceled.")
     return ConversationHandler.END
 
@@ -256,11 +262,47 @@ conv_handler = ConversationHandler(
         EMAIL: [MessageHandler(Filters.text & ~Filters.command, collect_email)],
         FEEDBACK: [MessageHandler(Filters.text & ~Filters.command, save_feedback)],
     },
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CommandHandler('cancelf', cancelf)],
 )
 
+def send_rate_to_api(rate, userId, username):
+    api_url = 'http://localhost:9000/api/rate/push'
+    data = {
+        'rate': rate,
+        'userId': userId,
+        'username': username
+           }
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    response = requests.post(api_url, data=json.dumps(data), headers=headers)
+    if response.status_code == 201:
+        return True
+    return False
+list_button_click = ["Thanks!", "Thanks a lot!", "Thank you very much!", "Thank you so much!", "Thank you from the bottom of my heart!"]
 
+def calculate_rate(update, context):
+    rate = 0.0
 
+    query = update.callback_query
+    payload = query.data
+    if payload in list_button_click:
+        query.answer()
+        if payload=="Thank you from the bottom of my heart!":
+            rate=5.0
+        elif payload=="Thank you so much!":
+           rate=4.0
+        elif payload=="Thank you very much!":
+           rate=3.0
+        elif payload=="Thank a lot!":
+           rate=2.0
+        elif payload=="Thanks!":
+           rate=1.0
+    return rate
+
+def cancel(update, context):
+    update.message.reply_text("Rate collection canceled.")
+    
 
 def start(update: Update, context: CallbackContext):
     
@@ -317,25 +359,17 @@ def start(update: Update, context: CallbackContext):
     # Replace key1 with the modified list
     key3=  key1 + new_key2
 
-    # Print the updated key1 list
-    for row in new_key2:
-        print(row)
-    
-    # print(key1)
     reply_markup = ReplyKeyboardMarkup(key3, one_time_keyboard=True, resize_keyboard=True)
     # Send text responses along with the reply keyboard
     for text_response in text_responses:
         update.message.reply_text(text_response, reply_markup=reply_markup)
-        
-      
+
 
 def handle_message(update: Update, context: CallbackContext):
     global count
     users = update.message.from_user
     message_type = update.message.chat.type
     text = update.message.text
-    print( dict_user)
-    print(text)
     
     if text=="Feedback" and  count == 0:
         return message_overtaken(update, context)
@@ -379,7 +413,6 @@ def handle_message(update: Update, context: CallbackContext):
             text = entry.get('text', '')
             buttons = entry.get('buttons', [])
             button_pairs = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
-            
             # Create the keyboard markup with pairs of buttons
             keyboard = [
                 [InlineKeyboardButton(button['title'], callback_data=button['payload']) for button in button_pair]
@@ -403,77 +436,116 @@ def handle_message(update: Update, context: CallbackContext):
             else:
                 update.message.reply_text(text, reply_markup=reply_markup)
 
-# Button Click Handling
+def stop_running_thread():
+    global exit_event
+    exit_event.set()  # Signal the running thread to exit gracefully
 
-list_button_click = ["Thanks!", "Thanks a lot!", "Thank you very much!", "Thank you so much!", "Thank you from the bottom of my heart!"]
+# Add a handler to stop the running thread when necessary
+def handle_stop_command(update, context):
+    stop_running_thread()
+    update.message.reply_text("Stopped the current operation.")
+
+
 
 def handle_button_click(update: Update, context: CallbackContext):
-    
+    global running_thread
     query = update.callback_query
     payload = query.data
-    # values= " "
-    if payload in list_button_click:
-       query.answer()
-    #     print(query)
-    #     if payload=="wow Thanks":
-    #         values=5
-    #     elif payload=="wow Thanks":
-    #        values=4
-    #     valuess=(user_id, userName, values)
-    #     dataser="insert into feedback(useId,userName,rating) values(%s,%s,%s)"
-    #     mycursor.execute(dataser,values)
-    #     mydb.commit()
-        
-       query.edit_message_text(payload)
-    else:
-        payload = {
-            'sender': query.message.chat_id,
-            'message': payload
-        }
-        response = requests.post(RASA_API_ENDPOINT, json=payload).json()
-        
-        message = None
-        chat_id =update.callback_query.message.chat_id
+    userId = update.effective_user.id
+    username = update.effective_user.username
+    
+    # Check if there is a running thread, and if so, signal it to exit gracefully
+    if running_thread:
+        query.edit_message_text("Stopping the previous request...")
+        exit_event.set()  # Signal the running thread to exit
+        running_thread.join()  # Wait for the running thread to finish
+    
+    # Start a new thread to handle the request
+    running_thread = threading.Thread(target=process_request, args=(update, context, query, payload, userId, username))
+    running_thread.start()
 
-        
-        for entry in response:
-            text = entry.get('text', '')
-            buttons = entry.get('buttons', [])
-            button_pairs = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
-            
-            # Create the keyboard markup with pairs of buttons
-            keyboard = [
-                [InlineKeyboardButton(button['title'], callback_data=button['payload']) for button in button_pair]
-                for button_pair in button_pairs
-            ]
-            reply_markup = InlineKeyboardMarkup(keyboard)
-            if entry.get('image'):
-        # Sleep for 5 seconds before sending the image (adjust as needed)
-                time.sleep(5)
-        
-                if message:
-                    # If there's an existing message, edit it with the new image and caption
-                    context.bot.edit_message_media( media=InputMediaPhoto(entry['image']),  reply_markup=reply_markup, chat_id=chat_id ,message_id=message.message_id )
-                    
-                    # message.edit_media( media=InputMediaPhoto(entry['image']),  caption=text, reply_markup=reply_markup )
+
+
+
+
+
+
+
+
+
+
+
+# Button Click Handling
+def process_request(update, context, query, payload, userId, username):
+    query = update.callback_query
+    payload = query.data
+    userId = update.effective_user.id
+    username = update.effective_user.username
+    try:
+            if payload in list_button_click:
+                query.answer()
+                rate = calculate_rate(update, context)
+            #    print(rate,"yououououououououo")
+                if send_rate_to_api(rate, userId, username):
+                    query.edit_message_text(payload)
+                    #  query.edit_message_text(f"{payload}, It has been submitted.")
                 else:
-                    # If there's no existing message, send the first image
-                    message = query.message.reply_photo( photo=entry['image'], caption=text, reply_markup=reply_markup )
-            elif entry.get("attachment"):
-                attachment = entry["attachment"]
-                if attachment and attachment.get('type') == 'video':
-                    # print("this is video", attachment)
-                    payload = attachment.get('payload')
-                    if payload:
-                        title = payload.get('title', 'Default Title')
-                        src = payload.get('src')
-                    # Send a message with the video link
-                        query.edit_message_text(f"Check this video: {title}\n{src}", reply_markup=reply_markup)
-                        # await time.sleep(5)
-                        time.sleep(5)  # Add a delay of 5 seconds
+                    context.bot.send_message(chat_id=query.message.chat_id, text="Failed to send your rate. Please try again later.")
+
             else:
-                query.edit_message_text(text, reply_markup=reply_markup)
-        
+                payload = {
+                    'sender': query.message.chat_id,
+                    'message': payload
+                }
+                response = requests.post(RASA_API_ENDPOINT, json=payload).json()
+                
+                message = None
+                chat_id =update.callback_query.message.chat_id
+
+                for entry in response:
+                    text = entry.get('text', '')
+                    buttons = entry.get('buttons', [])
+                    button_pairs = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
+                    
+                    # Create the keyboard markup with pairs of buttons
+                    keyboard = [
+                        [InlineKeyboardButton(button['title'], callback_data=button['payload']) for button in button_pair]
+                        for button_pair in button_pairs
+                    ]
+                    reply_markup = InlineKeyboardMarkup(keyboard)
+                    if entry.get('image'):
+                # Sleep for 5 seconds before sending the image (adjust as needed)
+                        time.sleep(5)
+                
+                        if message:
+                            # If there's an existing message, edit it with the new image and caption
+                            context.bot.edit_message_media( media=InputMediaPhoto(entry['image']),  reply_markup=reply_markup, chat_id=chat_id ,message_id=message.message_id )
+                            
+                            # message.edit_media( media=InputMediaPhoto(entry['image']),  caption=text, reply_markup=reply_markup )
+                        else:
+                            # If there's no existing message, send the first image
+                            message = query.message.reply_photo( photo=entry['image'], caption=text, reply_markup=reply_markup )
+                    elif entry.get("attachment"):
+                        attachment = entry["attachment"]
+                        if attachment and attachment.get('type') == 'video':
+                            # print("this is video", attachment)
+                            payload = attachment.get('payload')
+                            if payload:
+                                title = payload.get('title', 'Default Title')
+                                src = payload.get('src')
+                            # Send a message with the video link
+                                query.edit_message_text(f"Check this video: {title}\n{src}", reply_markup=reply_markup)
+                                # await time.sleep(5)
+                                time.sleep(5)  # Add a delay of 5 seconds
+                    else:
+                        query.edit_message_text(text, reply_markup=reply_markup)
+    except Exception as e:
+        print("An error occurred:", str(e))
+    finally:
+        global running_thread
+        running_thread = None
+        exit_event.clear()
+                
 def main():
     updater = Updater(token="6549938880:AAGSRCR5a6IY1qg9Y-SFp__bkkA2nOLxoHI", use_context=True)
     dp = updater.dispatcher
@@ -493,6 +565,10 @@ def main():
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
     dp.add_handler(CallbackQueryHandler(handle_button_click))
+    dp.add_handler(CommandHandler('cancel', cancel))
+    # dp.add_handler(CallbackQueryHandler(collect_rate))
+    dp.add_handler(CommandHandler("stop", handle_stop_command))
+
 
     print('Polling...')
     

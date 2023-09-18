@@ -371,7 +371,8 @@ nlu:
    - visit park
    - oromias' park
    - oromias parks
-   - visit oromia park  
+   - visit oromia park
+   - visit oromia national park
    - national park under visit oromia
    - what are national parks of visit oromia
    - help me with national park of visit oromia
@@ -391,6 +392,7 @@ nlu:
    - oromias bird
    - visit bird
    - visit oromia bird
+   - visit oromia birds
    - bird visit oromia 
    - birds under visit oromia
    - what are birds of visit oromia
@@ -445,6 +447,7 @@ nlu:
    - oromia museums
    - visit oromia museums
    - museum nad monument
+   - visit oromia museum
    - monument
    - museum nad monument under visit oromia
    - what are museum nad monument of visit oromia
@@ -518,6 +521,7 @@ nlu:
    - activities taken under different destinations
    - help me with activities
    - visit activities
+   - visit oromia activities
 #####################################################################################
 #
 #                        Hiking
@@ -547,6 +551,8 @@ nlu:
    - oromia camping
    - visit oromia camping
    - visit camp
+   - visit oromia camp
+   - visit oromia campinng
    - oromia camp
    - camping under visit oromia
    - what are destination having camping of visit oromia
@@ -612,6 +618,7 @@ nlu:
     - destination
     - oromia destination
     - visit oromia destination
+    - visit oromia destinations
     - oromia destinations 
     - known destinations
 
@@ -636,7 +643,8 @@ nlu:
    - how can i get southern tourism route
    - southern tourism
    - oromia southern tourism
-   - visit oromia southern tourism route
+   - visit oromia southern tourism 
+   - southern tourism route
    - visit southern tourism route
    - visit south oromia
 
@@ -648,6 +656,8 @@ nlu:
    - how can i get south west tourism route
    - visit oromia south west tourism route
    - visit oromia south west
+   - visit south west tourism 
+   - visit south west tourism route
 
 - intent: southeastTR
   examples: | 
@@ -656,6 +666,9 @@ nlu:
    - what are south east tourism routes
    - how can i get south east tourism route
    - visit oromia south east tourism route
+   - visit south east oromia
+   - south east 
+   - visit south east
    - visit south east oromia
 
 - intent: easternTR
@@ -666,6 +679,8 @@ nlu:
    - how can i get eastern tourism route
    - visit oromia eastern
    - visit eastern oromia
+   - eastern oromia
+   - eastern oromia tourism route
 
 - intent: westernTR
   examples: | 
@@ -675,6 +690,9 @@ nlu:
    - how can i get western tourism route
    - visit oromia western
    - visit western oromia
+   - western oromia
+   - western tourism route
+   - visit oromia western tourism route
 
 #######################################################################################################
 #                                                                                                     #
@@ -690,8 +708,12 @@ nlu:
   examples: | 
    - I want information about covid_19 in Ethiopia
    - help me with covid_19 information
-   - tell me  about covid_19 information 
+   - tell me about covid_19 information 
    - list criteria of care covid_19 information in ethiopia
+   - covid_19
+   - what is covid_19
+   - help me with covid_19
+   - covid_19 in ethiopia 
 
 #######################################################################################################
 #  language setting 
@@ -699,6 +721,11 @@ nlu:
   examples: | 
    - I want to change language
    - how to change language
+   - language setting
+   - language
+   - change language
+   - other language
+   - language setting
    - tell me  how to change language
    - this bot support different language
 
@@ -810,6 +837,8 @@ nlu:
     - visit central cultural life style
     - what is central culture life style
     - tell me cultural life style
+    - visit oromia cultural life style
+    - visit cultural life style
 
 - intent: two_culture_life_style
   examples: |
@@ -818,6 +847,9 @@ nlu:
     - what is central two culture life style
     - tell me two culture life style
     - two culture life style
+    - visit two culture life style
+    - central two culture life style
+    - visit oromia two culture life style
   
 ##################################################################################
 
@@ -830,6 +862,7 @@ nlu:
     - finfinne to adama tourist line
     - visit finfinne to adam
     - finfine to adama
+    - adama to finfine
 
 - intent: oda_nabe
   examples: |
@@ -839,6 +872,8 @@ nlu:
     - location and direction of oda nabe 
     - please show me the way to oda nabe
     - oda nabe
+    - how to reach oda nabe
+    - visit oda nabe
 
 - intent: cafe_tuma
   examples: |
@@ -848,6 +883,8 @@ nlu:
     - location and direction of cafe tuma 
     - please show me the way to cafe tuma
     - cafe tuma
+    - visit cafe tuma
+    - visit oromia cafe tuma
 
 - intent: bishoftu_town
   examples: |
@@ -861,6 +898,7 @@ nlu:
     - bishoftu
     - bushoftu
     - oromia bishuftu
+    - visit bishoftu town
 
 - intent: lake_hora_harsade
   examples: |
@@ -874,6 +912,7 @@ nlu:
     - harsade
     - visit hora harsade
     - oromia harsade lake
+    - visit lake horrsade
 
 - intent: lake_bishoftu
   examples: |
@@ -884,6 +923,7 @@ nlu:
     - please show me the way to lake bishoftu 
     - lake bishoftu
     - visit lake bishuftu
+    - direction of lake bishoftu
     
 
 - intent: lake_babo_gaya
@@ -897,6 +937,7 @@ nlu:
     - babo gaya
     - visit babo gaya
     - oromia babo gaya
+    - visit oromia babo gaya
  
 - intent: lake_kuriftu
   examples: |
@@ -906,7 +947,7 @@ nlu:
     - location and direction of lake kuriftu 
     - please show me the way to lake kuriftu
     - lake kuriftu
-    - visit kuriftu
+    - visit oromia lake kuriftu 
     - visit lake kuriftu
 
 - intent: lake_kilole
@@ -919,6 +960,8 @@ nlu:
     - lake kilole
     - visit lake kilole
     - visit kilole
+    - visit oromia lake kilole
+    - lake kilole oromia
 
 - intent: lake_magarisa
   examples: |
@@ -930,6 +973,8 @@ nlu:
     - lake magarisa
     - visit lake magarisa
     - visit magarisa
+    - visit oromia lake magarisa
+    - lake magarisa oromia
 
 - intent: mountain_ziquala
   examples: |
@@ -941,6 +986,8 @@ nlu:
     - mountain chukala
     - visit mountain chukala
     - visit chukala
+    - visit omomia chukala
+    - mountain chukala oromia
 
 - intent: mountain_yarar
   examples: |
@@ -952,6 +999,7 @@ nlu:
     - mountain yarar
     - visit mountain yarar
     - visit yarar
+    - mountain yarar oromia
 
 #######################################################################################
 - intent: adama_sodare_tourist_line
@@ -964,7 +1012,8 @@ nlu:
     - adama to sodare tourist line
     - naziret to sodare 
     - visit adama to sodare
-
+    - adama to sodare
+    - adama to sodare oromia
 
 - intent: adama
   examples: |
@@ -979,6 +1028,8 @@ nlu:
     - Natherit
     - visit adama
     - visit nazrit
+    - adama oromia
+    - nazrit oromia
 
 - intent: oromo_martyr_monument
   examples: |
@@ -989,7 +1040,10 @@ nlu:
     - please show me the way to oromo martyr monument
     - oromo martyr monument
     - visit martyr
-    -
+    - visit oromo martyr 
+    - visit oromo martyr monument oromia
+    - visit oromo martyr
+
 
 - intent: garagadi_hot_spring
   examples: |
@@ -999,7 +1053,12 @@ nlu:
     - location and direction of garagadi hot spring
     - please show me the way to garagadi hot spring
     - garagadi hot spring
-    - spring
+    - hot spring 
+    - visit garagadi hot spring
+    - garagadi hot spring oromia
+    - visit oromia garagadi hot spring
+    - visit garagadi
+  
   
 
 - intent: boku_steam
@@ -1011,6 +1070,8 @@ nlu:
     - please show me the way to boku steam
     - boku steam
     - steam
+    - visit boku steam
+    - boku steam
 
 - intent: sodare_spa_resort
   examples: |
@@ -1020,6 +1081,9 @@ nlu:
     - location and direction of sodare spa resort
     - please show me the way to sodare spa resort
     - sodare spa resort
+    - visit sodare spa resort
+    - sodare spa resort oromia
+    - sodare resort
 
 - intent: dhera_dilfaqar
   examples: |
@@ -1030,7 +1094,9 @@ nlu:
     - please show me the way to dhera dilfaqar proposed park
     - dhera dilfaqar proposed park
     - dhera dilfaqar
-    - dera dilfaqar
+    - visit dera dilfaqar
+    - visit oromia dhera dilfaqar
+    - dhera dilfaqar oromia
 
 ######################################################################################
 
@@ -1042,7 +1108,9 @@ nlu:
     - location and direction of finfinne shashamane tourist line
     - please show me the way to finfinne shashamane tourist line
     - finfinne shashamane tourist line
-    - finfinne shashamane 
+    - finfine shashamane 
+    - visit finfinne to shashamane
+    - visit oromia finfine to shashamane 
 
 - intent: lake_dambal
   examples: |
@@ -1054,6 +1122,8 @@ nlu:
     - lake dambal
     - dambal
     - visit dambal
+    - visit lake dambal
+    - lake dambal oromia
 
 - intent: lake_langano
   examples: |
@@ -1064,6 +1134,9 @@ nlu:
     - please show me the way to lake langano
     - lake langano
     - langano
+    - visit lake langano
+    - visit oromia lake langano
+    - lake langano oromia
  
 - intent: abijata_shala
   examples: |
@@ -1076,6 +1149,8 @@ nlu:
     - abijata shala
     - abijata
     - shala
+    - visit abijata shala
+    - abijata shala oromia
 
 
 ##########################################################################################
@@ -1089,6 +1164,9 @@ nlu:
     - please show me the way to finfinne ambo woliso tourist line
     - finfinne ambo woliso tourist line
     - finfinne ambo
+    - visit finfinne ambo
+    - finfinne to ambo
+    - visit finfinne to ambo oromia
 
 - intent: managasha_suba_national_forest
   examples: |
@@ -1100,6 +1178,10 @@ nlu:
     - managasha suba national forest
     - managasha
     - managasha suba
+    - visit managasha suba
+    - visit managasha
+    - managasha suba oromia
+    - visit oromia managasha suba
    
 - intent: finfinne_alem_church_museum
   examples: |
@@ -1111,6 +1193,8 @@ nlu:
     - finfinne alem church and museum
     - finfinne alem church
     - alem church
+    - visit finfinne alem church
+    - visit oromia finfinne alem church
 
 - intent: chilimogaji_forest
   examples: |
@@ -1121,7 +1205,8 @@ nlu:
     - please show me the way to chilimogaji forest
     - chilimogaji forest
     - chilimogaji
-
+    - visit chilimogaji forest
+    - chilimogaji forest oromia
 
 - intent: lake_dandi
   examples: |
@@ -1132,6 +1217,8 @@ nlu:
     - please show me the way to lake dandi
     - lake dandi
     - dandi
+    - visit lake dandi
+    - lake dandi oromia
 
 - intent: ambo
   examples: |
@@ -1141,6 +1228,9 @@ nlu:
     - location and direction of ambo
     - please show me the way to ambo
     - ambo
+    - the way to ambo
+    - visit ambo
+    - ambo oromia
 
 - intent: direction_wenchi
   examples: |
@@ -1153,6 +1243,11 @@ nlu:
     - wonchi
     - wanci
     - wancii
+    - visit wonchi
+    - visit wenchi
+    - wenchi oromia
+    - the way to wenchi
+    - wonchi oromia
 
 - intent: adadi_mariam_church
   examples: |
@@ -1163,6 +1258,8 @@ nlu:
     - please show me the way to adadi mariam church
     - adadi mariam church
     - adadi mariam
+    - visit adadi mariam church
+    - adadi mariam church oromia
 #################################################################################################
 #################################################################################################
 - intent: finfinne_north_shewa_tourist_line
@@ -1174,10 +1271,12 @@ nlu:
     - please show me the way to finfinne north shewa tourist line
     - finfine north shewa tourist line
     - northern
-    - north
+    - north oromia
     - north shewa
     - finfine north shewa
-
+    - visit north shewa
+    - north shewa oromia
+    - visit oromia north shewa
 
 - intent: mugar_valley_darba_water_fall
   examples: |
@@ -1190,6 +1289,8 @@ nlu:
     - mugar valley
     - darba 
     - derba water fall
+    - visit derba water fall
+    - visit oromia derba water fall
 
 - intent: monestry_debra_libanos
   examples: |
@@ -1199,6 +1300,12 @@ nlu:
     - location and direction of monestry of debra libanos 
     - please show me the way to monestry of debra libanos
     - monestry of debra libanos
+    - debra libanos
+    - visit debra libanos
+    - visit oromia debra libanos
+    - debra libanos monestry
+    - how to reach debra libanos
+    - debra libanos monestry oromia
 
 
 - intent: portugues_bridge
@@ -1209,6 +1316,9 @@ nlu:
     - location and direction of portugues bridge
     - please show me the way to portugues bridge
     - portugues bridge
+    - visit portugues bridge
+    - visit oromia portugues bridge
+    - portugues bridge oromia
 
 - intent: guha_tsion_mariam_washa_michael_church
   examples: |
@@ -1218,7 +1328,12 @@ nlu:
     - location and direction of guha tsion mariam and washa michael church
     - please show me the way to guha tsion mariam and washa michael church
     - guha tsion mariam and washa michael church
-
+    - visit washa michael church
+    - visit guha tsion mariam
+    - visit oromia washa michael church
+    - visit oromia guha tsion mariam
+    - guha tsion mariam
+    - washa michael church
 ####################################################################################################
 #                                                                                                  #
 #                                                                                                  #
@@ -1235,6 +1350,9 @@ nlu:
     - location and direction of southern culture life style
     - please show me the way to southern culture life style
     - southern culture life style
+    - visit southern culture life style
+    - visit oromia southern culture life style
+    - southern culture life style, oromia
 
 - intent: sankalle_wild_life_reserve
   examples: |
@@ -1244,6 +1362,13 @@ nlu:
     - location and direction of sankalle wild life reserve or sanctuary
     - please show me the way to sankalle wild life reserve or sanctuary
     - sankalle wild life reserve or sanctuary
+    - visit sankalle wild life reserve or sanctuary
+    - sankalle wild life reserve or sanctuary oromia
+    - sankalle wild life reserve
+    - sankalle wild life sanctuary
+    - visit sankalle wild life sanctuary
+    - visit sankalle wild life reserve
+    - sankalle wild life reserve oromia
   
 - intent: forest_scenery_around_guji
   examples: |
@@ -1253,6 +1378,10 @@ nlu:
     - location and direction of forest scenery around guji
     - please show me the way to forest scenery around guji
     - forest scenery around guji
+    - visit forest scenery around guji
+    - forest scenery around guji oromia
+    - visit oromia forest scenery around guji oromia
+    - forest scenery around guji oromia
 
 - intent: mee_boko_gada_site
   examples: |
@@ -1266,6 +1395,9 @@ nlu:
     - mee boko
     - meeboko
     - meboko
+    - visit mee boko
+    - me'e boko gada site oromia
+    - visit oromia me'e boko gada site
 
 - intent: destination_around_borana
   examples: |
@@ -1275,7 +1407,12 @@ nlu:
     - location and direction of destinations around borana
     - please show me the way to destinations around borana
     - destinations around borana
-
+    - visit  destinations around borana
+    - destinations around borana oromia
+    - borana 
+    - visit borana 
+    - borana oromia
+    - visit oromia borana
 
 - intent: town_mega_yabelo
   examples: |
@@ -1285,6 +1422,10 @@ nlu:
     - location and direction of town of mega and yabelo
     - please show me the way to town of mega and yabelo
     - town of mega and yabelo
+    - visit town of mega and yabelo
+    - town of mega and yabelo oromia
+    - visit oromia mega town
+    - visit yabelo
 
 - intent: bokes
   examples: |
@@ -1296,6 +1437,10 @@ nlu:
     - bokes or craters
     - bokes
     - crate
+    - visit bokes
+    - visit crate
+    - visit oromia 
+    - bokes oromia
 
 #################################################################################################
 #                                                                                               #
@@ -1313,6 +1458,9 @@ nlu:
     - location and direction of south western tourist route
     - please show me the way to south western tourist route
     - south western tourist route
+    - visit south western 
+    - visit oromia south western tourism route
+    - south western
 
 - intent: south_western_culture_lifestyle
   examples: |
@@ -1322,6 +1470,9 @@ nlu:
     - location and direction of south western culture and life style
     - please show me the way to south western culture and life style
     - south western culture and life style
+    - south western culture and life style
+    - visit south western culture
+    - visit south western culture and life style
 
 - intent: District_galana_abaya
   examples: |
@@ -1331,6 +1482,9 @@ nlu:
     - location and direction of districts of galana and abaya
     - please show me the way to districts of galana and abaya
     - districts of galana and abaya
+    - visit galana 
+    - visit galana and abaya
+    - visit galana and abaya oromia
 
 - intent: wallame_hot_spring
   examples: |
@@ -1340,6 +1494,8 @@ nlu:
     - location and direction of wallame hot spring
     - please show me the way to wallame hot spring
     - wallame hot spring
+    - visit wallame hot spring
+    - wallame hot spring oromia
 
 - intent: gibe_gorge
   examples: |
@@ -1349,6 +1505,8 @@ nlu:
     - location and direction of gibe gorge
     - please show me the way to gibe gorge
     - gibe gorge
+    - visit gibe gorge
+    - gibe gorge oromia
 
 - intent: jimma
   examples: |
@@ -1358,6 +1516,10 @@ nlu:
     - location and direction of jimma
     - please show me the way to jimma
     - jimma
+    - jima
+    - visit jimma
+    - jimma oromia
+    - jima oromia
 
 - intent: aba_jifar_palace
   examples: |
@@ -1368,7 +1530,12 @@ nlu:
     - please show me the way to aba jifar palace
     - aba jifar palace
     - abajifar palace
+    - visit aba jifar palace
     - abbajifar palace
+    - aba jifar
+    - abba jifar
+    - abba jifar palace 
+    - abba jifar oromia
 
 - intent: tropical_forest_jimma_illuababora
   examples: |
@@ -1379,6 +1546,9 @@ nlu:
     - please show me the way to tropical forests of jimma and illu aba bora
     - tropical forests of jimma and illu aba bora
     - tropical forests of jimma
+    - visit tropical forest
+    - vist jimma tropical forest 
+    - jimma tropical forest
 
 - intent: falls_around_jimma_Hu
   examples: |
@@ -1388,6 +1558,9 @@ nlu:
     - location and direction of falls around jimma and Hu
     - please show me the way to falls around jimma and Hu
     - falls around jimma and Hu
+    - jimma falls
+    - visit falls around jimma and Hu
+    - visit jimma falls anf Hu
 
 - intent: sor_water_fall
   examples: |
@@ -1397,6 +1570,9 @@ nlu:
     - location and direction of sor water fall
     - please show me the way to sor water fall
     - sor water fall
+    - visit sor water fall
+    - sor water fall oromia
+    - illu sor water fall
 
 - intent: gore_town
   examples: |
@@ -1406,6 +1582,9 @@ nlu:
     - location and direction of gore town
     - please show me the way to gore town
     - gore town
+    - visit gore town
+    - gore twon oromia
+    - location of gore town
 
 #####################################################################################################
 #                                                                                                   #
@@ -1423,6 +1602,10 @@ nlu:
     - location and direction of south eastern culture and life style
     - please show me the way to south eastern culture and life style
     - south eastern culture and life style
+    - visit south eastern culture and life style
+    - south eastern culture and life style oromia
+    - south eastern culture
+    - visit south eastern culture 
 
 - intent: museums_arsi_asala
   examples: |
@@ -1432,6 +1615,8 @@ nlu:
     - location and direction of museums in arsi asala district
     - please show me the way to museums in arsi asala district
     - museums in arsi asala district
+    - visit museums in arsi to asala
+    - museums in arsi to asala
 
 - intent: anole_martyr_monument
   examples: |
@@ -1441,6 +1626,9 @@ nlu:
     - location and direction of anole martyr's monument
     - please show me the way to anole martyr's monument
     - anole martyr's monument
+    - visit anole martyr's monument
+    - anole martyr's
+    - visit anole
 
 - intent: arsi_mountains_national_park
   examples: |
@@ -1450,7 +1638,9 @@ nlu:
     - location and direction of arsi mountains national park
     - please show me the way to arsi mountains national park
     - arsi mountains national park
-
+    - visit arsi mountains national park
+    - arsi national park
+    - visit arsi national park
 
 - intent: dodola_adaba_forest
   examples: |
@@ -1460,6 +1650,9 @@ nlu:
     - location and direction of dodola adaba forest
     - please show me the way to dodola adaba forest
     - dodola adaba forest
+    - visit dodola adaba forest
+    - visit adaba forest
+    - visit adaba
 
 - intent: bale_moountains_national_park
   examples: |
@@ -1471,6 +1664,9 @@ nlu:
     - bale moountains national park
     - bale mountain
     - bale
+    - visit bale mountain
+    - visit bale 
+    - visit bale moountains national park
 
 - intent: sanate
   examples: |
@@ -1480,6 +1676,8 @@ nlu:
     - location and direction of sanate
     - please show me the way to sanate
     - sanate
+    - visit sanate
+    - sanate oromia
 
 - intent: mada_walabu
   examples: |
@@ -1489,6 +1687,8 @@ nlu:
     - location and direction of mada walabu
     - please show me the way to mada walabu
     - mada walabu
+    - visit mada walabu
+    - visit mada walabu oromia
 
 - intent: sof_umar_cafe
   examples: |
@@ -1498,6 +1698,8 @@ nlu:
     - location and direction of sof umar cafe
     - please show me the way to sof umar cafe
     - sof umar cafe
+    - visit sof umar cafe
+    - sof umar cafe oromia
 
 - intent: dire_sheikh_hussein
   examples: |
@@ -1508,6 +1710,8 @@ nlu:
     - please show me the way to dire sheikh hussein
     - dire sheikh hussein
     - sheikh hussein
+    - visit dire sheikh hussein
+    - visit sheikh hussein
 
 - intent: wabe_gorge
   examples: |
@@ -1517,6 +1721,8 @@ nlu:
     - location and direction of wabe gorge
     - please show me the way to wabe gorge
     - wabe gorge
+    - visit wabe gorge
+    - wabe gorge oromia
 
 ##########################################################################################
 #                                                                                        #
@@ -1534,6 +1740,9 @@ nlu:
     - location and direction of eastern tourist route
     - please show me the way to eastern tourist route
     - eastern tourist route
+    - visit eastern tourist route
+    - visit eastern tourist route
+    - eastern touris
 
 - intent: asabo_mountains_monestry
   examples: |
@@ -1543,6 +1752,10 @@ nlu:
     - location and direction of asabo mountains and its monestry
     - please show me the way to asabo mountains and its monestry
     - asabo mountains and its monestry
+    - visit asabo mountains 
+    - visit asabo mountains and its monestry
+    - visit asabo monestry
+    - asabo mountains and its monestry oromia
 
 - intent: jalo_kunni_mukhtar_forest
   examples: |
@@ -1552,6 +1765,9 @@ nlu:
     - location and direction of jalo kunni mukhtar forest
     - please show me the way to jalo kunni mukhtar forest
     - jalo kunni mukhtar forest
+    - visit jalo kunni mukhtar forest
+    - jalo kunni mukhtar forest oromia
+    - visit jalo kunni muktar forest
 
 - intent: oda_bultum
   examples: |
@@ -1561,6 +1777,8 @@ nlu:
     - location and direction of oda bultum
     - please show me the way to oda bultum
     - oda bultum
+    - visit oda bultum
+    - oda bultum oromia
 
 - intent: burka_kobtu_sama_hot_spring
   examples: |
@@ -1570,6 +1788,11 @@ nlu:
     - location and direction of burka and kobtu sama hot spring
     - please show me the way to burka and kobtu sama hot spring
     - burka and kobtu sama hot spring
+    - visit burka and kobtu sama hot spring
+    - burka and kobtu sama hot spring oromia
+    - visit burka 
+    - visit kobtu sama hot spring
+    - visit burka hot spring
 
 - intent: Chororapithecus
   examples: |
@@ -1579,6 +1802,8 @@ nlu:
     - location and direction of Chororapithecus
     - please show me the way to Chororapithecus
     - Chororapithecus
+    - visit Chororapithecus
+    - Chororapithecus oromia
 
 - intent: harala_ruins
   examples: |
@@ -1588,6 +1813,8 @@ nlu:
     - location and direction of harala ruins
     - please show me the way to harala ruins
     - harala ruins
+    - visit harala ruins
+    - harala ruins oromia
 
 - intent: dindin_forest
   examples: |
@@ -1597,6 +1824,9 @@ nlu:
     - location and direction of dindin forest
     - please show me the way to dindin forest
     - dindin forest
+    - visit dindin forest
+    - dindin forest oromia
+    - dindin 
   
 - intent: chalanko_oromo_martyr_memorial_monument
   examples: |
@@ -1606,6 +1836,9 @@ nlu:
     - location and direction of chalanko oromo martyrs' memorial monument
     - please show me the way to chalanko oromo martyrs' memorial monument
     - chalanko oromo martyrs' memorial monument
+    - visit chalanko oromo martyrs'
+    - visit chalanko oromo martyrs' memorial monument
+    - chalanko oromo martyrs' memorial monument oromia
 
 - intent: dire_dawa
   examples: |
@@ -1615,6 +1848,8 @@ nlu:
     - location and direction of dire dawa
     - please show me the way to dire dawa
     - dire dawa
+    - visit dire dawa
+    - dire dawa oromia
 
 - intent: babile_elephant_sanctuary
   examples: |
@@ -1624,6 +1859,12 @@ nlu:
     - location and direction of babile elephant sanctuary
     - please show me the way to babile elephant sanctuary
     - babile elephant sanctuary
+    - visit babile elephant sanctuary
+    - babile elephant sanctuary oromia
+    - elephant sanctuary
+    - babile elephant
+    - babile elephant sanctuary oromia
+    - visit oromia babile elephant
 
 - intent: unique_rock_formation_babile
   examples: |
@@ -1633,6 +1874,9 @@ nlu:
     - location and direction of unique rock formation of babile
     - please show me the way to unique rock formation of babile
     - unique rock formation of babile
+    - visit unique rock formation of babile
+    - visit unique rock formation
+    - unique rock formation
 
 - intent: mountain_kundudo
   examples: |
@@ -1642,6 +1886,9 @@ nlu:
     - location and direction of mountain kundudo
     - please show me the way to mountain kundudo
     - mountain kundudo
+    - visit mountain kundudo
+    - visit oromia mountain kundudo
+    - visit kundudo
 
 - intent: dima_cave
   examples: |
@@ -1651,6 +1898,9 @@ nlu:
     - location and direction of dima cave
     - please show me the way to dima cave
     - dima cave
+    - visit dima cave
+    - dima cave oromia
+    - visit oromia dima cave
 
 - intent: oromo_cave
   examples: |
@@ -1660,6 +1910,8 @@ nlu:
     - location and direction of oromo cave
     - please show me the way to oromo cave
     - oromo cave
+    - visit oromo cave
+    - visit oromia oromo cave
 
 - intent: historical_mosques
   examples: |
@@ -1669,6 +1921,8 @@ nlu:
     - location and direction of historical mosques
     - please show me the way to historical mosques
     - historical mosques
+    - visit historical mosques
+    - historical mosques oromia
 
 #################################################################################################
 #                                                                                               #
@@ -1686,6 +1940,9 @@ nlu:
     - location and direction of western tourist route
     - please show me the way to western tourist route
     - western tourist route
+    - visit western tourism route
+    - western route
+    - westerb tourism
 
 - intent: western_culture_life_style
   examples: |
@@ -1695,6 +1952,9 @@ nlu:
     - location and direction of western culture and life style
     - please show me the way to western culture and life style
     - western culture and life style
+    - visit western culture and life style
+    - western culture
+    - visit western culture
 
 - intent: oda_buluk_gada_site
   examples: |
@@ -1704,6 +1964,9 @@ nlu:
     - location and direction of oda buluk gada site
     - please show me the way to oda buluk gada site
     - oda buluk gada site
+    - visit oda buluk gada site
+    - oda buluk 
+    - gada site
 
 - intent: fincha_dam
   examples: |
@@ -1715,6 +1978,8 @@ nlu:
     - fincha'a dam
     - finchaa dam
     - fincha dam
+    - visit fincha dam
+    - fincha dam oromia
 
 - intent: bareda_angar_water_fall
   examples: |
@@ -1724,6 +1989,10 @@ nlu:
     - location and direction of bareda angar water fall
     - please show me the way to bareda angar water fall
     - bareda angar water fall
+    - bareda angar water fall
+    - bareda angar
+    - visit bareda angar water
+    - bareda angar water fall oromia
 
 - intent: dhati_walal_park
   examples: |
@@ -1733,6 +2002,8 @@ nlu:
     - location and direction of dhati walal park
     - please show me the way to dhati walal park
     - dhati walal park
+    - visit dhati walal park
+    - dhati walal park oromia
 
 - intent: keto_water_fall
   examples: |
@@ -1742,6 +2013,9 @@ nlu:
     - location and direction of keto water fall
     - please show me the way to keto water fall
     - keto water fall
+    - visit keto water fall
+    - keto water fall oromia
+    - keto water
 
 - intent: walal_shabal
   examples: |
@@ -1751,6 +2025,10 @@ nlu:
     - location and direction of walal shabal conservation area and garajeda forest
     - please show me the way to walal shabal conservation area and garajeda forest
     - walal shabal conservation area and garajeda forest
+    - visit walal shabal
+    - visit garajeda forest
+    - arajeda forest
+    - walal shabal
     
 - intent: goodbye 
   examples: |

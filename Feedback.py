@@ -19,7 +19,7 @@ def start(update: Update, context: CallbackContext):
 
 def message_overtaken(update: Update, context: CallbackContext):
     print("text", update.message.text)
-    ")
+    
     if update.message.text == 'Feedback':
         context.bot.send_message(chat_id=update.effective_user.id, text="Great! Please enter your first name.!")
         return FIRST_NAME

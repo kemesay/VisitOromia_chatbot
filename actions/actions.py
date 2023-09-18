@@ -1157,29 +1157,31 @@ class Actiongalleryimage(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         image_urls = [
+            
+            "https://otc.visitoromia.org/uploads/culture/4_9pkdryi.jpg", 
+            "https://otc.visitoromia.org/uploads/culture/32.jpg",
+
+            "https://otc.visitoromia.org/uploads/culture/34.jpg",
+            "https://otc.visitoromia.org/uploads/culture/27.jpg",
+            "https://otc.visitoromia.org/uploads/culture/26_u4kJaI5.jpg", 
+            "https://otc.visitoromia.org/uploads/culture/22.jpg",
+            "https://otc.visitoromia.org/uploads/culture/28_MSmJHAl.jpg",
+            
             "http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png",
-            # "https://otc.visitoromia.org/uploads/route_text/Lake_Hora_Harsade.jpg",
             "https://otc.visitoromia.org/uploads/route_image/Mountain_Yarar.jpg",
             "https://otc.visitoromia.org/uploads/culture/2_fLUMPXw.png", 
             "https://otc.visitoromia.org/uploads/route_image/Lake_Kilole.jpg", 
             "http://otc.visitoromia.org/uploads/svg/one.png", 
-            "https://otc.visitoromia.org/uploads/culture/4_9pkdryi.jpg", 
             "https://otc.visitoromia.org/uploads/route_image/Lake_Babogaya.jpg", 
             "https://otc.visitoromia.org/uploads/route_image/oromo_cultural_center.jpg",
             "https://otc.visitoromia.org/uploads/route_image/lake_bishoftu_Dream_Land_Resort.jpg",
-            # "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
             "https://otc.visitoromia.org/uploads/route_image/EUGpz_BXsAM1PQ6.jpg",
             "https://otc.visitoromia.org/uploads/route_image/lake_dembel.jpg",
             "https://otc.visitoromia.org/uploads/route_image/Lake_Langano_Resort_Area.jpg",
             "https://otc.visitoromia.org/uploads/route_image/photo_2022-03-10_16-34-33_Xp8TkQf.jpg",
             "https://otc.visitoromia.org/uploads/route_image/Lake_Magarisa.jpg", 
             "https://otc.visitoromia.org/uploads/route_image/Mountain_Chuqala_Ziquala.jpg",
-            "https://otc.visitoromia.org/uploads/culture/22.jpg",
-            "https://otc.visitoromia.org/uploads/culture/28_MSmJHAl.jpg",
-            "https://otc.visitoromia.org/uploads/culture/34.jpg",
-            "https://otc.visitoromia.org/uploads/culture/27.jpg",
-            "https://otc.visitoromia.org/uploads/culture/26_u4kJaI5.jpg", 
-            "https://otc.visitoromia.org/uploads/culture/32.jpg", 
+ 
             "https://otc.visitoromia.org/uploads/route_image/Cafe_Tuma.jpg", 
             "https://otc.visitoromia.org/uploads/route_image/Oda_Nabe_ji8BqOX.jpg",
             "http://otc.visitoromia.org/uploads/svg/photo_2022-03-03_11.15.31.png",
@@ -1213,23 +1215,24 @@ class Actiongalleryvideos(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[EventType]:
         # dispatcher.utter_message("wait... Loading Video")
-        videos = [
-                    {"title": "Video 1", "src": "https://youtu.be/kBRkY5EUzZw"},
-                    {"title": "Video 2", "src": "https://youtu.be/GB-UhaijKO4g"},
-                    {"title": "Video 3", "src": "https://www.youtube.com/watch?v=wvQES92POPQg"},
-                    {"title": "Video 4", "src": "https://youtu.be/kBRkY5EUzZw"},
-                    {"title": "Video 5", "src": "https://youtu.be/GB-UhaijKO4"},
-                    {"title": "Video 6", "src": "https://www.youtube.com/watch?v=wvQES92POPQ"},
-                    {"title": "Video 7", "src": "https://www.youtube.com/watch?v=HtGAJyMfago"},    
+        videos = [    
+                    {"title": "Video 1", "src": "https://www.youtube.com/watch?v=TpkVjMEWzTs"},
+                    {"title": "Video 2", "src": "https://www.youtube.com/watch?v=vwRchLuFruo"},
+
+                    {"title": "Video 3", "src": "https://www.youtube.com/watch?v=4-TWBOku6eQ"},
+                    {"title": "Video 4", "src": "https://www.youtube.com/watch?v=HXWwgu1gaNk"},
+                    {"title": "Video 5", "src": "https://www.youtube.com/watch?v=vrRv61GWkCQ"},
+                    {"title": "Video 6", "src": "https://www.youtube.com/watch?v=V05YU6RfHCE"},
+                    {"title": "Video 7", "src": "https://www.youtube.com/watch?v=2ZGFpy6fEhA"}, 
+                       
                     {"title": "Video 8", "src": "https://www.youtube.com/watch?v=jsavm7HvGwc"}, 
-                    {"title": "Video 9", "src": "https://www.youtube.com/watch?v=wvQES92POPQ"},
-                    {"title": "Video 10", "src": "https://www.youtube.com/watch?v=-3Ro7Y0ORFU"},            
-                    {"title": "Video 11", "src": "https://www.youtube.com/watch?v=dkSxsSwCeRA"},
-                    {"title": "Video 12", "src": "https://www.youtube.com/watch?v=mDBT7WTZemk"},
-                    {"title": "Video 13", "src": "https://www.youtube.com/watch?v=TSKIfUaohZE"},
-                    {"title": "Video 14", "src": "https://www.youtube.com/watch?v=Bu8OF-Sc8Cg"} ,
-                    {"title": "Video 15", "src": "https://www.youtube.com/watch?v=wQS9cJjDfYU"},
-                    {"title": "Video 16", "src": "https://www.youtube.com/watch?v=IIHMlklIysc"} 
+                    {"title": "Video 9", "src": "https://www.youtube.com/watch?v=dkSxsSwCeRA"},
+                    {"title": "Video 10", "src": "https://www.youtube.com/watch?v=TSKIfUaohZE"},
+                    {"title": "Video 11", "src": "https://www.youtube.com/watch?v=Bu8OF-Sc8Cg"} ,
+                    {"title": "Video 12", "src": "https://www.youtube.com/watch?v=wQS9cJjDfYU"},
+                    {"title": "Video 13", "src": "https://www.youtube.com/watch?v=vwRchLuFruo"},
+                    {"title": "Video 14", "src": "https://www.youtube.com/watch?v=b2B4iYuHzuA"},
+
                    ]
 
         for video in videos:
@@ -1317,9 +1320,6 @@ class Actiongalleryvideos(Action):
 # dispatcher.utter_message(template = template, buttons = buttons)
 
    
-
-
-
 
 #     def run(
 #         self,
