@@ -1521,5 +1521,5 @@ class ActionFallback(Action):
         return "action_default_fallback"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="I'm sorry, I didn't understand that. Can you please rephrase? or provide more information")
+        dispatcher.utter_message(text="I'm sorry, Can you please rephrase or provide more information? \n my Default language is English and others are under maintain.")
         return []

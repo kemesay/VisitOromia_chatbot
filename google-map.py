@@ -84,8 +84,8 @@ def inline_buttons():
 def nearest_of_otc_function(update: Update, context: CallbackContext):
     """Parses the CallbackQuery and updates the message text."""
     query = update.callback_query
-    print(query.answer())
-    print(query.data)
+    # print(query.answer())
+    # print(query.data)
     
     if query.data == "m2":
         calculated_data = calculate_nearest_location(latitude=LATITUDE, longitude=LONGITUDE,
@@ -118,7 +118,7 @@ def help_function(update: Update, context: CallbackContext):
 
     if query.data == "m3":
         query.message.reply_markdown(
-            text=f"Hello {update.effective_user.first_name} Provide Your location using the below button", reply_markup=inline_buttons())
+            text=f"Hello {update.effective_user.first_name} Provide Your location by using the location button")
         # print(query.message.location, 'helolollollllllll')
 
 def message_handler(update: Update, context: CallbackContext):
@@ -139,7 +139,7 @@ def message_handler(update: Update, context: CallbackContext):
 def calculate_nearest_location(latitude, longitude, destinations, num_locations=3):
     location_tuple1 = (latitude, longitude)
     location_distances = []
-    print("calculate_nearest_location")
+    # print("calculate_nearest_location")
     if latitude and longitude and destinations:
         for i in range(len(destinations)):
             location_tuple2 = (destinations[i]['latitude'], destinations[i]['longitude'])
@@ -189,7 +189,7 @@ def message_overtaken(update: Update, context: CallbackContext):
     global count  # Add this line
     users = update.message.from_user
     dict_user[users.id] = count
-    print("text from overtaken message", update.message.text )
+    # print("text from overtaken message", update.message.text )
     if update.message.text == 'Feedback':
         dict_user[users.id] = count+1
         context.bot.send_message(chat_id=update.effective_user.id, text="Great! Please enter your first name.!")
@@ -240,7 +240,7 @@ def save_feedback(update: Update, context: CallbackContext):
     send_feedback_to_api(feedback)
     user = update.message.from_user
 
-    update.message.reply_text(f"Thank you for your feedback, {user.first_name}! It has been submitted.")
+    update.message.reply_text(f"Thank you for your feedback that strength me, {user.first_name}! It has been submitted and I have been working on it.")
     return ConversationHandler.END
 
 def send_feedback_to_api(feedback):
@@ -305,7 +305,8 @@ def cancel(update, context):
     
 
 def start(update: Update, context: CallbackContext):
-    
+    username = update.effective_user.username
+    print(username)
     context.bot.send_photo(chat_id=update.effective_user.id, photo=open("visit_oromia.jpg", "rb"),
                            caption="Wel come to Oromia, the land rich in nature!")
     context.bot.send_message(chat_id=update.effective_user.id,
@@ -376,7 +377,7 @@ def handle_message(update: Update, context: CallbackContext):
     elif  users.id in dict_user.keys():
         
         if dict_user[users.id]==1:
-            print(dict_user)
+            # print(dict_user)
             return collect_feedback(update, context)
         elif dict_user[users.id]==2:
             return collect_last_name(update, context)
@@ -397,7 +398,7 @@ def handle_message(update: Update, context: CallbackContext):
                                         ]
         
         reply_markup = InlineKeyboardMarkup(rate_key)
-        update.message.reply_text("📹 Please rate us 📷", reply_markup=reply_markup)
+        update.message.reply_text("📹 Please rate me 📷", reply_markup=reply_markup)
         
     else:
         # print("rhis is double text", text)
@@ -445,35 +446,17 @@ def handle_stop_command(update, context):
     stop_running_thread()
     update.message.reply_text("Stopped the current operation.")
 
+user_threads = {}
 
-
-def handle_button_click(update: Update, context: CallbackContext):
-    global running_thread
+def handle_button_click(update, context):
     query = update.callback_query
     payload = query.data
-    userId = update.effective_user.id
+    user_id = update.effective_user.id
     username = update.effective_user.username
     
-    # Check if there is a running thread, and if so, signal it to exit gracefully
-    if running_thread:
-        query.edit_message_text("Stopping the previous request...")
-        exit_event.set()  # Signal the running thread to exit
-        running_thread.join()  # Wait for the running thread to finish
-    
     # Start a new thread to handle the request
-    running_thread = threading.Thread(target=process_request, args=(update, context, query, payload, userId, username))
-    running_thread.start()
-
-
-
-
-
-
-
-
-
-
-
+    new_thread = threading.Thread(target=process_request, args=(update, context, query, payload, user_id, username))
+    new_thread.start()
 
 # Button Click Handling
 def process_request(update, context, query, payload, userId, username):
@@ -481,6 +464,7 @@ def process_request(update, context, query, payload, userId, username):
     payload = query.data
     userId = update.effective_user.id
     username = update.effective_user.username
+    print(username)
     try:
             if payload in list_button_click:
                 query.answer()
@@ -490,7 +474,7 @@ def process_request(update, context, query, payload, userId, username):
                     query.edit_message_text(payload)
                     #  query.edit_message_text(f"{payload}, It has been submitted.")
                 else:
-                    context.bot.send_message(chat_id=query.message.chat_id, text="Failed to send your rate. Please try again later.")
+                    context.bot.send_message(chat_id=query.message.chat_id, text="Rate is once only, Thank you!.")
 
             else:
                 payload = {
@@ -498,6 +482,7 @@ def process_request(update, context, query, payload, userId, username):
                     'message': payload
                 }
                 response = requests.post(RASA_API_ENDPOINT, json=payload).json()
+                # print("response", response)
                 
                 message = None
                 chat_id =update.callback_query.message.chat_id

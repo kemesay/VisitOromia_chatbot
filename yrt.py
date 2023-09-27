@@ -148,3 +148,84 @@ if __name__=="__main__":
     # Updater.idle()
 
 
+
+
+
+
+import telegram
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackQueryHandler
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+import threading
+import time
+
+# Your Telegram Bot API Token
+TOKEN = 'YOUR_BOT_API_TOKEN'
+
+# Define Conversation States
+ASK_QUESTION, RECEIVE_IMAGES = range(2)
+
+# Dictionary to store user data
+user_data = {}
+
+# Function to start the bot
+def start(update, context):
+    user = update.message.from_user
+    update.message.reply_text(f"Hi {user.first_name}! I am your image bot.")
+    return ASK_QUESTION
+
+# Function to ask a question
+def ask_question(update, context):
+    user = update.message.from_user
+    user_data[user.id] = {"question": update.message.text}
+    keyboard = [[InlineKeyboardButton("Generate Images", callback_data="generate_images")]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    update.message.reply_text(
+        "Do you want to generate images from this question?",
+        reply_markup=reply_markup
+    )
+    return RECEIVE_IMAGES
+
+# Function to generate images and send them
+def generate_images(update, context):
+    user = update.message.from_user
+    question = user_data[user.id]["question"]
+
+    # Simulate generating images with a sleep delay
+    time.sleep(5)
+
+    # Replace this with your actual image generation logic
+    # For demonstration purposes, we'll just send a text message
+    context.bot.send_message(chat_id=update.effective_chat.id, text=f"Images generated for: {question}")
+
+    # End the conversation
+    return ConversationHandler.END
+
+# Function to handle button clicks
+def button_click(update, context):
+    query = update.callback_query
+    query.answer()
+    if query.data == "generate_images":
+        return generate_images(update, context)
+
+def main():
+    updater = Updater(token=TOKEN, use_context=True)
+    dp = updater.dispatcher
+
+    # Create a conversation handler
+    conv_handler = ConversationHandler(
+        entry_points=[CommandHandler('start', start)],
+        states={
+            ASK_QUESTION: [MessageHandler(Filters.text & ~Filters.command, ask_question)],
+            RECEIVE_IMAGES: [CallbackQueryHandler(button_click, pattern="^generate_images$")],
+        },
+        fallbacks=[]
+    )
+
+    dp.add_handler(conv_handler)
+
+    # Start the bot
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
