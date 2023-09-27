@@ -101,73 +101,52 @@ import requests
 
 
 #################################################################################################################################### Login With locally Stored Password
-LOGIN_STATE = 1
-MAIN_MENU_STATE = 2
+# def login_button():
+#     btn = [
+#         [InlineKeyboardButton(text="Login", callback_data="login")],
+#     ]
+#     return InlineKeyboardMarkup(btn)
 
-# Create a dictionary to store user passwords (you should replace this with a proper authentication system)
-user_passwords = {
-    "Mekebede": "1234",
-    "user2": "5678",
-}
-
-
-def login_button():
-    btn = [
-        [InlineKeyboardButton(text="Login", callback_data="login")],
+def main_menu():
+    main_keyboard = [
+        [KeyboardButton(text="🌀 Spinning Win"), KeyboardButton(text="🗑 Keno")],
+        [KeyboardButton(text=" 🎟 Lotter"), KeyboardButton(text="⚽ Sport Betting")],
+        [KeyboardButton(text=" 👛 Your Balance")]
     ]
-    return InlineKeyboardMarkup(btn)
+    return ReplyKeyboardMarkup(main_keyboard)
+    # update.message.reply_text("Select your Preferred Game!", reply_markup=reply_markup)
+
 
 
 def start(update: Update, context: CallbackContext):
     username = update.effective_user.username
     print(username)
     context.bot.send_message(chat_id=update.effective_user.id,
-                             text=f"Hello Mr/Mrs. {update.effective_user.first_name} \n Wel come to Preferred Bot based Game", reply_markup=login_button())
+                             text=f"Hello Mr/Mrs. {update.effective_user.first_name} \n Wel come to Preferred Bot based Game", reply_markup=main_menu())
 
 
+list_button_click = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29",
+                     "30", "31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56",
+                     "57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72", "73","74", "75","76","77","78","79","80"]
+            
+selected_numbers = []              
+                
 def handle_button_click(update: Update, context: CallbackContext):
     query = update.callback_query
     query.answer()
-    if query.data == "login":
-       return ready_to_start(update, context)
+    payload = query.data
+    # if query.data == "login":
+    #    return ready_to_start(update, context)
+    if payload in list_button_click:
+        # selected_numbers.clear()
+        selected_numbers.append(payload)
+        print(selected_numbers)
+        
+        if len(selected_numbers) == 6:
+            context.bot.send_message(chat_id=update.effective_user.id, text=f"You have selected {selected_numbers}")
+            selected_numbers.clear()
 
-
-
-def ready_to_start(update: Update, context: CallbackContext):
-    context.user_data['login_attempts'] = 0
-    context.bot.send_message(chat_id=update.effective_user.id, text="Please enter your password:")
-    return LOGIN_STATE
-
-def start_login(update: Update, context: CallbackContext):
-    user = update.message.from_user
-    password = update.message.text
-    context.user_data['login_attempts'] = 0
-    context.bot.send_message(chat_id=update.effective_user.id, text="Please enter your password:")
-
-    # Replace 'user1' with the actual user ID or username
-    if user.username in user_passwords and user_passwords[user.username] == password:
-        update.message.reply_text("Login successful!")
-        context.user_data['login_attempts'] = 0
-        return main_menu(update, context)
-    else:
-        context.user_data['login_attempts'] += 1
-        if context.user_data['login_attempts'] >= 3:
-            update.message.reply_text("Too many login attempts. Please try again later.")
-            return ConversationHandler.END
-        else:
-            update.message.reply_text("Incorrect password. Please try again:")
-            return LOGIN_STATE
-
-# Modify the main_menu function to include the inline keyboard for login
-def main_menu(update: Update, context: CallbackContext):
-    main_keyboard = [
-        [KeyboardButton(text="🌀 Spinning Win"), KeyboardButton(text="🗑 Keno")],
-        [KeyboardButton(text=" 🎟 Lotter"), KeyboardButton(text="⚽ Sport Betting")],
-        [KeyboardButton(text=" 👛 W-Balance")]
-    ]
-    reply_markup = ReplyKeyboardMarkup(main_keyboard)
-    update.message.reply_text("Select your Preferred Game!", reply_markup=reply_markup)
-    return MAIN_MENU_STATE
+    return selected_numbers
 
 def message_handler(update: Update, context: CallbackContext):
     users = update.message.from_user
@@ -178,28 +157,130 @@ def message_handler(update: Update, context: CallbackContext):
     if text=="🌀 Spinning Win":
                 update.message.reply_text(text ="Coming Soon")
     elif text=="🗑 Keno":
-                update.message.reply_text(text ="Coming Soon")
+                rate_key =           [ [InlineKeyboardButton(text="1", callback_data="1"), 
+                                        InlineKeyboardButton(text="2", callback_data="2"), 
+                                        InlineKeyboardButton(text="3", callback_data="3"),
+                                        InlineKeyboardButton(text="4", callback_data="4"),
+                                        InlineKeyboardButton(text="5", callback_data="5"),
+                                        InlineKeyboardButton(text="6", callback_data="6"), 
+                                        InlineKeyboardButton(text="7", callback_data="7"), 
+                                        InlineKeyboardButton(text="8", callback_data="8")
+                                        ],
+                                        [
+                                        InlineKeyboardButton(text="9", callback_data="9"),
+                                        InlineKeyboardButton(text="10", callback_data="10"),
+                                        InlineKeyboardButton(text="11", callback_data="11"), 
+                                        InlineKeyboardButton(text="12", callback_data="12"), 
+                                        InlineKeyboardButton(text="13", callback_data="13"),
+                                        InlineKeyboardButton(text="14", callback_data="14"),
+                                        InlineKeyboardButton(text="15", callback_data="15"),
+                                        InlineKeyboardButton(text="16", callback_data="16") 
+                                        ],
+                                         [
+                                        InlineKeyboardButton(text="17", callback_data="17"), 
+                                        InlineKeyboardButton(text="18", callback_data="18"),
+                                        InlineKeyboardButton(text="19", callback_data="19"),
+                                        InlineKeyboardButton(text="20", callback_data="20") ,    
+                                        InlineKeyboardButton(text="21", callback_data="21"), 
+                                        InlineKeyboardButton(text="22", callback_data="22"), 
+                                        InlineKeyboardButton(text="23", callback_data="23"),
+                                        InlineKeyboardButton(text="24", callback_data="24")
+                                       
+                                        ],
+                                        [
+                                        InlineKeyboardButton(text="25", callback_data="25"),
+                                        InlineKeyboardButton(text="26", callback_data="26"), 
+                                        InlineKeyboardButton(text="27", callback_data="27"), 
+                                        InlineKeyboardButton(text="28", callback_data="28"),
+                                        InlineKeyboardButton(text="29", callback_data="29"),
+                                        InlineKeyboardButton(text="30", callback_data="30"),
+                                        InlineKeyboardButton(text="31", callback_data="31"), 
+                                        InlineKeyboardButton(text="32", callback_data="32") 
+                                        ],
+                                        [
+                                        InlineKeyboardButton(text="33", callback_data="33"),
+                                        InlineKeyboardButton(text="34", callback_data="34"),
+                                        InlineKeyboardButton(text="35", callback_data="35"),
+                                        InlineKeyboardButton(text="36", callback_data="36"), 
+                                        InlineKeyboardButton(text="37", callback_data="37"), 
+                                        InlineKeyboardButton(text="38", callback_data="38"),
+                                        InlineKeyboardButton(text="39", callback_data="39"),
+                                        InlineKeyboardButton(text="40", callback_data="40")
+                                        
+                                        ],
+                                         [
+                                            
+                                        InlineKeyboardButton(text="41", callback_data="41"), 
+                                        InlineKeyboardButton(text="42", callback_data="42"), 
+                                        InlineKeyboardButton(text="43", callback_data="43"),
+                                        InlineKeyboardButton(text="44", callback_data="44"),
+                                        InlineKeyboardButton(text="45", callback_data="45"),
+                                        InlineKeyboardButton(text="46", callback_data="46"), 
+                                        InlineKeyboardButton(text="47", callback_data="47"), 
+                                        InlineKeyboardButton(text="48", callback_data="48")
+                                        
+                                        ],
+                                          [
+                                            
+                                        InlineKeyboardButton(text="49", callback_data="49"),
+                                        InlineKeyboardButton(text="50", callback_data="50"),  
+                                        InlineKeyboardButton(text="51", callback_data="51"), 
+                                        InlineKeyboardButton(text="52", callback_data="52"), 
+                                        InlineKeyboardButton(text="53", callback_data="53"),
+                                        InlineKeyboardButton(text="54", callback_data="54"),
+                                        InlineKeyboardButton(text="55", callback_data="55"),
+                                        InlineKeyboardButton(text="56", callback_data="56") 
+                                        
+                                        ],
+                                           [
+                                        InlineKeyboardButton(text="57", callback_data="57"), 
+                                        InlineKeyboardButton(text="58", callback_data="58"),
+                                        InlineKeyboardButton(text="59", callback_data="59"),
+                                        InlineKeyboardButton(text="60", callback_data="60"),
+                                        InlineKeyboardButton(text="61", callback_data="61"), 
+                                        InlineKeyboardButton(text="62", callback_data="62"), 
+                                        InlineKeyboardButton(text="63", callback_data="63"),
+                                        InlineKeyboardButton(text="64", callback_data="64")
+                                        ],
+                                           
+                                        [
+                                        InlineKeyboardButton(text="65", callback_data="65"),
+                                        InlineKeyboardButton(text="66", callback_data="66"), 
+                                        InlineKeyboardButton(text="67", callback_data="67"), 
+                                        InlineKeyboardButton(text="68", callback_data="68"),
+                                        InlineKeyboardButton(text="69", callback_data="69"),
+                                        InlineKeyboardButton(text="70", callback_data="70"),      
+                                        InlineKeyboardButton(text="71", callback_data="71"), 
+                                        InlineKeyboardButton(text="72", callback_data="72"), 
+                                        ],
+                                        
+                                        [ 
+                                         InlineKeyboardButton(text="73", callback_data="73"),
+                                        InlineKeyboardButton(text="74", callback_data="74"),
+                                        InlineKeyboardButton(text="75", callback_data="75"),
+                                        InlineKeyboardButton(text="76", callback_data="76"), 
+                                        InlineKeyboardButton(text="77", callback_data="77"), 
+                                        InlineKeyboardButton(text="78", callback_data="78"),
+                                        InlineKeyboardButton(text="79", callback_data="79"),
+                                        InlineKeyboardButton(text="80", callback_data="80") 
+                                        ]
+                                           ]
+                reply_markup = InlineKeyboardMarkup(rate_key)
+                update.message.reply_text("your max selection number is 6 and you expand!", reply_markup=reply_markup)
+                         
+                
     elif text=="🎟 Lotter":
                         update.message.reply_text(text ="Coming Soon")
     elif text=="⚽ Sport Betting":
                 update.message.reply_text(text ="Coming Soon")
-    elif text=="👛 W-Balance":
+    elif text=="👛 Your Balance":
                 update.message.reply_text(text ="Coming Soon")
+                
+        
 
 def main():
     updater = Updater(token="6622622533:AAEyHKSXzmE2sfb9Ig9zRrsfrjX98wLkDbs", use_context=True)
     dp = updater.dispatcher
-
-    # Add conversation handler
-    conversation_handler = ConversationHandler(
-        entry_points=[MessageHandler(Filters.text & ~Filters.command,ready_to_start)],
-        states={
-            MAIN_MENU_STATE: [CallbackQueryHandler(handle_button_click)],
-            LOGIN_STATE: [MessageHandler(Filters.text & ~Filters.command, start_login)],
-        },
-        fallbacks=[],
-    )
-    dp.add_handler(conversation_handler)
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CallbackQueryHandler(handle_button_click))
     dp.add_handler(MessageHandler(Filters.location | Filters.text, message_handler, pass_chat_data=True))

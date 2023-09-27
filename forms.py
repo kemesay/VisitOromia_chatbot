@@ -1,44 +1,65 @@
-# my_chatbot/forms.py
+import requests
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 
-from rasa_sdk.forms import FormAction, REQUESTED_SLOT
-from rasa_sdk import Action, Tracker
-from typing import Any, Text, Dict, List, Union
-from rasa_sdk.executor import CollectingDispatcher
+# Initialize an empty list to store selected numbers
+selected_numbers = []
 
-class FeedbackForm(FormAction):
-    def name(self) -> Text:
-        return "feedback_form"
+# Your Telegram bot token here
+bot_token = 'YOUR_BOT_TOKEN'
+# API endpoint URL
+api_url = 'http://localhost:900/api/keno'
 
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        return ["first_name", "last_name", "email", "feedbackText"]
+# Command handler to start the game
+def start_game(update, context):
+    # Clear the selected numbers list when starting a new game
+    selected_numbers.clear()
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return {
-            "first_name": [self.from_text()],
-            "last_name": [self.from_text()],
-            "email": [self.from_text()],
-            "feedbackText": [self.from_text()],
-        }
+    rate_key = [
+        [InlineKeyboardButton(text=str(i), callback_data=str(i)) for i in range(1, 81)]
+    ]
 
-    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict]:
-        # Assuming you have a Spring Boot API endpoint to send the feedback
-        api_endpoint = "http://localhost:9000/feedback/giveFeedback"
-        feedback_data = {
-            "first_name": tracker.get_slot("first_name"),
-            "last_name": tracker.get_slot("last_name"),
-            "email": tracker.get_slot("email"),
-            "feedbackText": tracker.get_slot("feedbackText"),
-        }
+    reply_markup = InlineKeyboardMarkup(rate_key)
+    update.message.reply_text("Select six different numbers:", reply_markup=reply_markup)
 
-        # Code to send feedback_data to the Spring Boot API using requests library
-        import requests
-        response = requests.post(api_endpoint, json=feedback_data)
+# Callback handler for button clicks
+def button_click(update, context):
+    query = update.callback_query
+    number = int(query.data)
 
-        # Handle the API response and send a message to the user
+    if number in selected_numbers:
+        # Number is already selected, unselect it
+        selected_numbers.remove(number)
+    elif len(selected_numbers) < 6:
+        # Number is not selected, select it if less than 6 numbers are selected
+        selected_numbers.append(number)
+
+    # Update the message with the current selected numbers
+    query.edit_message_text(f"Selected numbers: {selected_numbers}")
+
+# Command handler to send selected numbers to the API
+def send_to_api(update, context):
+    if len(selected_numbers) == 6:
+        # Send the selected numbers to the API
+        response = requests.post(api_url, json={'selected_numbers': selected_numbers})
+
         if response.status_code == 200:
-            dispatcher.utter_message("Thank you for your feedback!")
+            update.message.reply_text("Numbers sent to API successfully!")
         else:
-            dispatcher.utter_message("Failed to submit feedback. Please try again later.")
+            update.message.reply_text("Failed to send numbers to API.")
+    else:
+        update.message.reply_text("You must select exactly six numbers before sending to API.")
 
-        return []
+def main():
+    updater = Updater(token=bot_token, use_context=True)
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler("start", start_game))
+    dp.add_handler(CallbackQueryHandler(button_click))
+    dp.add_handler(CommandHandler("sendtoapi", send_to_api))
+
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
